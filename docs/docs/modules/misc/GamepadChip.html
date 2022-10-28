@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GamepadChip</title><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer> </script><script src="/rgd.js" defer></script></head><body class="theme-light"><menu><div class="directory"><img class="menuimage" src="/assets/retrologo.png"/><div class="subcontents"><p><a class="\docs\modules\misc\GamepadChip.html" href="\README.html">README</a></p><div class="directory"><div class="directory-name"><div class="span material-symbols-rounded">expand_more</div><span>docs</span></div><div class="subcontents"><div class="directory"><div class="directory-name"><div class="span material-symbols-rounded">expand_more</div><span>github</span></div><div class="subcontents"><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\github\Contributing.html">Contributing</a></p></div></div><div class="directory"><div class="directory-name"><div class="span material-symbols-rounded">expand_more</div><span>modules</span></div><div class="subcontents"><div class="directory"><div class="directory-name"><div class="span material-symbols-rounded">expand_more</div><span>input</span></div><div class="subcontents"><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\input\DPad.html">DPad</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\input\Keypad.html">Keypad</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\input\Knob.html">Knob</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\input\LedButton.html">LedButton</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\input\ScreenButton.html">ScreenButton</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\input\Slider.html">Slider</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\input\Stick.html">Stick</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\input\Switch.html">Switch</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\input\Webcam.html">Webcam</a></p></div></div><div class="directory"><div class="directory-name"><div class="span material-symbols-rounded">expand_more</div><span>misc</span></div><div class="subcontents"><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\misc\AudioChip.html">AudioChip</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\misc\CPU.html">CPU</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\misc\Decoration.html">Decoration</a></p><p><a class="current" href="\docs\modules\misc\GamepadChip.html">GamepadChip</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\misc\KeyboardChip.html">KeyboardChip</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\misc\MagneticConnector.html">MagneticConnector</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\misc\PowerButton.html">PowerButton</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\misc\RealityChip.html">RealityChip</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\misc\VideoChip.html">VideoChip</a></p></div></div><div class="directory"><div class="directory-name"><div class="span material-symbols-rounded">expand_more</div><span>output</span></div><div class="subcontents"><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\output\Gauge.html">Gauge</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\output\Lcd.html">Lcd</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\output\Led.html">Led</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\output\LedMatrix.html">LedMatrix</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\output\LedStrip.html">LedStrip</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\output\Screen.html">Screen</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\output\SegmentDisplay.html">SegmentDisplay</a></p><p><a class="\docs\modules\misc\GamepadChip.html" href="\docs\modules\output\Speaker.html">Speaker</a></p></div></div></div></div></div></div><div class="directory"><div class="directory-name"><div class="span material-symbols-rounded">expand_more</div><span>examples</span></div><div class="subcontents"><p><a class="\docs\modules\misc\GamepadChip.html" href="\examples\getting-started.html">getting-started</a></p></div></div></div></div><div class="sync-info"><p>Last Synced:</p><p style="font-weight: 500">28/10/2022 8:15am PST</p><p style="font-size: 0.8em">Does not automatically sync.</p></div></menu><div class="layout-divider"></div><article><h1>GamepadChip</h1><hr><img src="https://docs.retrogadgets.game/api/modules/GamepadChip.png" width="200" align="right">
+
+<p>The GamepadChip is used to get input from a connected gamepad or controller.</p>
+<p><em><strong>⚠️ I don&#39;t know how this thing works and it has no official documentation.</strong></em></p>
+<h2>Properties</h2><h3>GamepadIndex - <code>number</code> <strong>[Read only]</strong></h3><h2>Methods</h2><h3>GetButton(name <code>InputName</code>) <code>InputSource</code></h3><h3>GetAxis(name <code>InputName</code>) <code>InputSource</code></h3><h3>GetButtonAxis(name <code>InputName</code>) <code>InputSource</code></h3><h2>Input Names <strong>[Read only]</strong></h2><p>Input names can be accessed by <code>GamepadChip.</code>nameOfInput, and are listed below.</p>
+<ul>
+<li><code>LeftStickX</code></li>
+<li><code>LeftStickY</code></li>
+<li><code>RightStickX</code></li>
+<li><code>RightStickY</code></li>
+<li><code>ActionBottomRow1</code></li>
+<li><code>a</code></li>
+<li><code>ActionBottomRow2</code></li>
+<li><code>b</code></li>
+<li><code>ActionBottomRow3</code></li>
+<li><code>c</code></li>
+<li><code>ActionTopRow1</code></li>
+<li><code>x</code></li>
+<li><code>ActionTopRow2</code></li>
+<li><code>y</code></li>
+<li><code>ActionTopRow3</code></li>
+<li><code>z</code></li>
+<li><code>LeftShoulder1</code></li>
+<li><code>LeftBumper</code></li>
+<li><code>LeftShoulder2</code></li>
+<li><code>LeftTrigger</code></li>
+<li><code>RightShoulder1</code></li>
+<li><code>RightBumper</code></li>
+<li><code>RightShoulder2</code></li>
+<li><code>RightTrigger</code></li>
+<li><code>Center1</code></li>
+<li><code>Back</code></li>
+<li><code>Center2</code></li>
+<li><code>Start</code></li>
+<li><code>Center3</code></li>
+<li><code>Guide</code></li>
+<li><code>LeftStickButton</code></li>
+<li><code>RightStickButton</code></li>
+<li><code>DPadUp</code></li>
+<li><code>DPadRight</code></li>
+<li><code>DPadDown</code></li>
+<li><code>DPadLeft</code></li>
+</ul>
+</article></body></html>

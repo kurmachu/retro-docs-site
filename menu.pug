@@ -1,0 +1,15 @@
+mixin menuFolder(index, currentPath)
+	div.directory
+		unless index.root 
+			.directory-name
+				.span.material-symbols-rounded expand_more
+				span= index.name
+		else
+			img.menuimage(src="/assets/retrologo.png")
+		.subcontents
+			- for (const file of index.files)
+				- let link = file.path.replace(/\.[^/.]+$/, "")+".html"
+				p
+					a(href=link, class= (`\\${currentPath}`==link)? "current" : `\\${currentPath}`)= file.name.replace(/\.[^/.]+$/, "")
+			- for (const folder of index.folders)
+				+menuFolder(folder, currentPath)

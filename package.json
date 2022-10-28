@@ -1,0 +1,16 @@
+{
+  "name": "retro-docs-site",
+  "version": "1.0.0",
+  "description": "Viewer for the unofficial community Retro Gadgets documentation",
+  "author": "Kurmachu",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-git": "^2.10.1",
+    "gulp-markdown": "^7.0.0",
+    "gulp-tap": "^2.0.0",
+    "highlight.js": "^11.6.0",
+    "pug": "^3.0.2"
+  }
+}

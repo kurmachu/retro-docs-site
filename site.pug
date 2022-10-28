@@ -1,0 +1,31 @@
+-
+	let name = fileName.replace(/\.[^/.]+$/, "")
+
+include menu.pug
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title= name
+
+		link(rel="stylesheet", href="/main.css")
+
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js", defer) 
+		script(src="/rgd.js", defer)
+	body.theme-light
+		menu
+			+menuFolder(index, filePath)
+			.sync-info
+				-
+					let offset = -8
+					let date = new Date(new Date().getTime() + offset * 3600*1000)
+				p Last Synced:
+				p(style="font-weight: 500")= "" + date.getUTCDate()+"/"+(((date.getUTCMonth()+1) < 10) ? ("0"+(date.getUTCMonth()+1)) : (date.getUTCMonth()+1))+"/"+date.getUTCFullYear()+" "+((date.getUTCHours() < 12) ? (date.getUTCHours()+1) : (date.getUTCHours()-12))+":"+((date.getUTCMinutes() < 10) ? "0"+date.getUTCMinutes() : date.getUTCMinutes())+((date.getUTCHours() < 12) ? "am" : "pm") + " PST"
+				p(style="font-size: 0.8em") Does not automatically sync.
+		.layout-divider
+		article
+			!= markdown
