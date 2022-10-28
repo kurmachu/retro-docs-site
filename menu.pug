@@ -5,11 +5,11 @@ mixin menuFolder(index, currentPath)
 				.span.material-symbols-rounded expand_more
 				span= index.name
 		else
-			img.menuimage(src="/assets/retrologo.png")
+			img.menuimage(src="/retro-docs-site/assets/retrologo.png")
 		.subcontents
 			- for (const file of index.files)
 				- let link = file.path.replace(/\.[^/.]+$/, "")+".html"
 				p
-					a(href=link, class= (`\\${currentPath}`==link)? "current" : `/retro-docs-site/${currentPath}`)= file.name.replace(/\.[^/.]+$/, "")
+					a(href="/retro-docs-site"+link, class= (`\\${currentPath}`==link)? "current" : '')= file.name.replace(/\.[^/.]+$/, "")
 			- for (const folder of index.folders)
 				+menuFolder(folder, currentPath)
