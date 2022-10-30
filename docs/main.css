@@ -17,14 +17,27 @@
 }
 
 .theme-light {
-	--menu-link-background: #00ddff00;
-    --menu-link-foreground: #006777;
+	--menu-link-background: #445dff0f;
+    --menu-link-foreground: #445dff;
 
-    --menu-link-background-hover: #00ddff2e;
-    --menu-link-foreground-hover: #006777;
+    --menu-link-background-hover: #445dff38;
+    --menu-link-foreground-hover: #445dff;
 
-    --menu-link-background-current: #1f97ac;
+    --menu-link-background-current: #445dff;
     --menu-link-foreground-current: #ffffff;
+
+	--article-color-code-foreground: #ad5100;
+    --article-color-code-background: #ffa14d21;
+
+	--article-pre-border: #44ff6d;
+	--article-pre-background: #06150a;
+
+	--hljs-keyword: #42a3ff;
+	--hljs-string: #ffff65;
+	--hljs-comment: #44ff6d9e;
+
+	--sync-info-color: #704b00;
+    --sync-info-background: #ffe5543b;
 }
 
 
@@ -47,12 +60,13 @@ menu {
 	padding: 10px;
 	padding-right: 5px;
 	margin: 0px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
 	transition: width 0.5s;
 	justify-content: space-between;
+	box-sizing: border-box;
 }
 
 menu p {
@@ -122,7 +136,7 @@ menu a.current {
 
 
 article {
-	overflow: scroll;
+	overflow: auto;
 	flex-basis: 1px;
 	flex-grow: 1;
 	padding-right: 10px;
@@ -154,14 +168,14 @@ article h3 {
 	font-weight: 500;
 }
 article code {
-	background-color: #e3d55b30;
-    color: #756900;
+	color: var(--article-color-code-foreground);
+	background-color: var(--article-color-code-background);
     padding: 1px 5px;
     border-radius: 6px;
 }
 article pre {
-	background-color: #242c25;
-    border: 2px solid #66c466;
+	background-color: var(--article-pre-background);
+    border: 2px solid var(--article-pre-border);
     border-radius: 5px;
     padding: 5px;
 	white-space: pre-wrap;
@@ -177,20 +191,20 @@ article pre > code {
 
 
 .hljs-keyword {
-    color: #42a3ff;
+    color: var(--hljs-keyword);
 }
 .hljs-string {
-    color: #ffff65;
+    color: var(--hljs-string);
 }
 .hljs-comment {
-    color: #66c466;
+    color: var(--hljs-comment);
 	font-style: italic;
 }
 
 .sync-info {
 	font-size: 0.8em;
-	background-color: #ffa5000d;
-    color: #bf7b00e0;
+	background-color: var(--sync-info-background);
+    color: var(--sync-info-color);
     padding: 5px 10px;
     border-radius: 10px;
 	margin-top: 14px;

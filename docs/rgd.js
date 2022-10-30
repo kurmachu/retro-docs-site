@@ -7,17 +7,17 @@ $('menu').on('click','.directory-name', function(){
 	}
 	if (directory.hasClass('closed')){
 
-		let oldWidth = $('menu').width()
+		let oldWidth = $('menu').innerWidth()
 
 		let subcontents = directory.children('.subcontents')
 		subcontents.css('height','').css('display','')//TODO: upgrade
 
 		let newHeight = subcontents.height()
-		let newWidth = $('menu').css('width','').width()
+		let newWidth = $('menu').css('width','').innerWidth()
 
 		subcontents.css('height', 0).height()
 		subcontents.css('height', newHeight)
-		$('menu').css('width', oldWidth).width()
+		$('menu').css('width', oldWidth).innerWidth()
 		$('menu').css('width', newWidth)
 		directory.removeClass('closed')
 		let timeout = window.setTimeout(()=>{
@@ -29,16 +29,16 @@ $('menu').on('click','.directory-name', function(){
 	}else{
 		let subcontents = directory.children('.subcontents')
 
-		let oldWidth = $('menu').width()
+		let oldWidth = $('menu').innerWidth()
 		let oldHeight = subcontents.height()
 		
 		subcontents.css('height',0).css('display','none')//TODO: upgrade
 
-		let newWidth = $('menu').css('width','').width()
+		let newWidth = $('menu').css('width','').innerWidth()
 
 		subcontents.css('height', oldHeight).css('display','').height()
 		subcontents.css('height', 0)
-		$('menu').css('width', oldWidth).width()
+		$('menu').css('width', oldWidth).innerWidth()
 		$('menu').css('width', newWidth)
 		directory.addClass('closed')
 		let timeout = window.setTimeout(()=>{
