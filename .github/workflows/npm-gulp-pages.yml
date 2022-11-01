@@ -1,0 +1,37 @@
+name: NodeJS with Gulp for Pages
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+
+    - name: Build
+      run: |
+        npm install
+        gulp
+        
+    - name: Upload GitHub Pages artifact
+      uses: actions/upload-pages-artifact@v1.0.4
+      with:
+        # Path of the directory containing the static assets.
+        path: docs/
+        # Duration after which artifact will expire in days.
+        #retention-days: # optional, default is 1
+        
+    - name: Deploy GitHub Pages site
+      uses: actions/deploy-pages@v1.2.2
+    
