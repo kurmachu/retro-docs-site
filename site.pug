@@ -25,7 +25,7 @@ html(lang="en")
 					let date = new Date(new Date().getTime() + offset * 3600*1000)
 				p Last Synced:
 				p(style="font-weight: 500")= "" + date.getUTCDate()+"/"+(((date.getUTCMonth()+1) < 10) ? ("0"+(date.getUTCMonth()+1)) : (date.getUTCMonth()+1))+"/"+date.getUTCFullYear()+" "+((date.getUTCHours() < 12) ? (date.getUTCHours()+1) : (date.getUTCHours()-12))+":"+((date.getUTCMinutes() < 10) ? "0"+date.getUTCMinutes() : date.getUTCMinutes())+((date.getUTCHours() < 12) ? "am" : "pm") + " PST"
-				p(style="font-size: 0.8em") Does not automatically sync.
+				p(style="font-size: 0.8em") Syncs automatically at ~12am PST
 		.layout-divider
 		article
 			!= markdown
