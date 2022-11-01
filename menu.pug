@@ -10,6 +10,6 @@ mixin menuFolder(index, currentPath)
 			- for (const file of index.files)
 				- let link = file.path.replace(/\.[^/.]+$/, "")+".html"
 				p
-					a(href="/retro-docs-site"+link, class= (`\\${currentPath}`==link)? "current" : '')= file.name.replace(/\.[^/.]+$/, "")
+					a(href="/retro-docs-site"+link, class= (currentPath==link.substring(1))? "current" : '')= file.name.replace(/\.[^/.]+$/, "")
 			- for (const folder of index.folders)
 				+menuFolder(folder, currentPath)
