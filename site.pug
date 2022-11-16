@@ -3,6 +3,13 @@
 
 include menu.pug
 
+mixin icon-label(icon)
+	div.icon-label
+		p.material-symbols-rounded= icon
+		p.icon-label-text
+			block
+
+
 doctype html
 html(lang="en")
 	head
@@ -12,20 +19,73 @@ html(lang="en")
 		title= name
 
 		link(rel="stylesheet", href="/retro-docs-site/main.css")
+		link(rel="stylesheet", href="/retro-docs-site/themes.css")
 
 		link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200")
+		
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js", defer) 
 		script(src="/retro-docs-site/rgd.js", defer)
-	body.theme-light
+	body.theme-arithm
 		menu
 			+menuFolder(index, filePath)
-			.sync-info
-				-
-					let offset = -8
-					let date = new Date(new Date().getTime() + offset * 3600*1000)
-				p Last Synced:
-				p(style="font-weight: 500")= "" + date.getUTCDate()+"/"+(((date.getUTCMonth()+1) < 10) ? ("0"+(date.getUTCMonth()+1)) : (date.getUTCMonth()+1))+"/"+date.getUTCFullYear()+" "+((date.getUTCHours() < 12) ? ((date.getUTCHours()==0)? '12' : date.getUTCHours() ) : (date.getUTCHours()-12))+":"+((date.getUTCMinutes() < 10) ? "0"+date.getUTCMinutes() : date.getUTCMinutes())+((date.getUTCHours() < 12) ? "am" : "pm") + " PST"
-				p(style="font-size: 0.8em") Syncs automatically at ~12:30am PST
+			.tools
+				.tool-dialogue
+					.tool-bubble.hidden
+						.tool-bubble-contents#c_sync(style="display: none")
+							.sync-fork-notification
+								+icon-label('alt_route')
+									strong You're viewing a fork.
+								p To maintain functionality, changes to the official repository will temporarily not be reflected.
+								hr
+							-
+								let offset = -8
+								let date = new Date(new Date().getTime() + offset * 3600*1000)
+							p Last Synced:
+							p(style="font-weight: 500")= "" + date.getUTCDate()+"/"+(((date.getUTCMonth()+1) < 10) ? ("0"+(date.getUTCMonth()+1)) : (date.getUTCMonth()+1))+"/"+date.getUTCFullYear()+" "+((date.getUTCHours() <= 12) ? ((date.getUTCHours()==0)? '12' : date.getUTCHours() ) : (date.getUTCHours()-12))+":"+((date.getUTCMinutes() < 10) ? "0"+date.getUTCMinutes() : date.getUTCMinutes())+((date.getUTCHours() < 12) ? "am" : "pm") + " PST"
+							p(style="font-size: 0.8em") Syncs automatically at ~12:30am PST
+						.tool-bubble-contents#c_lang(style="display: none")
+							+icon-label('translate')
+								p!= `Viewing documentation in <b>${fileLanguage}</b>`
+							p(style="margin-top: 5px") Switch to:
+							ul(style="margin-top: 0px")
+								- for (const folder of index.folders)
+									li
+										a(href=`/retro-docs-site/${folder.name}/README.html`)= folder.meta.languageName
+							p
+								small Interface elements are not translated. Changing language will send you to README.
+							p
+								small 
+									strong Language missing or incomplete? <a href="https://github.com/NexTre-dev/retro-gadgets-docs">Submit an issue or help translate.</a>
+						.tool-bubble-contents#c_theme(style="display: none")
+							+icon-label('pending')
+								strong There aren't any other themes yet.
+							p 
+								small The current theme is called
+									em "arithm"
+						.tool-bubble-contents#c_info(style="display: none")
+							.fork-notification
+								+icon-label('alt_route')
+									strong You're viewing a fork.
+								p Changes won't be synced and edit links may not work.
+								hr
+							p Generated automatically from markdown.
+							+icon-label('edit')
+								a(href=`https://github.com/NexTre-dev/retro-gadgets-docs/blob/main/${filePath.substring(0, filePath.length - 4)}html`) Edit this page
+							+icon-label('report')
+								a(href="https://github.com/NexTre-dev/retro-gadgets-docs/issues") Submit an issue
+							hr
+							+icon-label('code')
+								a(href="https://github.com/kurmachu/retro-docs-site") Viewer Source
+					.tool-dialogue-arrow-area
+						.dialogue-arrow.lang
+						.dialogue-arrow.theme
+						.dialogue-arrow.sync
+						.dialogue-arrow.info
+				.toolbar
+					p.toolbarIcon.material-symbols-rounded.lang(data-is="lang", data-open="c_lang") Language
+					p.toolbarIcon.material-symbols-rounded.theme(data-is="theme", data-open="c_theme") Palette
+					p.toolbarIcon.material-symbols-rounded.sync(data-is="sync", data-open="c_sync") Sync_Problem
+					p.toolbarIcon.material-symbols-rounded.info(data-is="info", data-open="c_info") Info
 		.layout-divider
 		article
 			!= markdown

@@ -18,7 +18,7 @@ function clean(cb){
 
 function clone_docs() {
 	return new Promise((resolve, reject)=>{
-		git.clone('https://github.com/NexTre-dev/retro-gadgets-docs', {args: './build/upstream'}, function(err) {
+		git.clone('https://github.com/kurmachu/retro-gadgets-docs', {args: '-b refactor-languages ./build/upstream'}, function(err) {
 			if(err){reject(err)}else{resolve()}
   		});
 	})
@@ -48,8 +48,7 @@ function build_docs(cb) {
 		let siteFunction = pug.compileFile('site.pug')
 
 		new Promise(async (resolve, reject)=>{
-			index = await RecursivelyBuildIndex("./build/upstream/", "/")
-			index.root = true
+			index = await RecursivelyBuildIndex("./build/upstream/", "/", {langs: true})
 			resolve()
 		}).then(()=>{new Promise((resolve, reject)=>{
 			gulp.src(["./build/upstream/**/*.md","./build/upstream/examples/**/*.md"])
@@ -59,7 +58,8 @@ function build_docs(cb) {
 					markdown: file.contents.toString(), 
 					fileName: file.basename,
 					filePath: file.relative,
-					index: index
+					index: index,
+					fileLanguage: translateCodeToName(file.relative.split(path.sep)[0])
 				}))
 			}))
 			.pipe(gulp.dest('./docs')).on('finish', ()=>{
@@ -70,14 +70,30 @@ function build_docs(cb) {
 }
 
 
-async function RecursivelyBuildIndex(thisFolder, offset){
-	let folders = await (await fs.readdir(thisFolder, {withFileTypes: true})).filter((f)=>{return f.isDirectory()})
-	let files = await (await fs.readdir(thisFolder, {withFileTypes: true})).filter((f)=>{return !f.isDirectory()})
+async function RecursivelyBuildIndex(thisFolder, offset, inherit){
 	let index = {
 		files: [],
 		folders: [],
-		name: path.basename(thisFolder)
+		name: path.basename(thisFolder),
+		meta: {...inherit}
 	}
+
+	inherit = {...inherit}
+
+	if (inherit.langs){
+		inherit.langs = false
+		inherit.root = true
+	} else if (inherit.root){
+		inherit.root = false
+		inherit.language = index.name
+		inherit.languageName = translateCodeToName(index.name) //TODO: translation
+		index.meta.language = inherit.language
+		index.meta.languageName = inherit.languageName
+	}
+
+	let folders = await (await fs.readdir(thisFolder, {withFileTypes: true})).filter((f)=>{return f.isDirectory()})
+	let files = await (await fs.readdir(thisFolder, {withFileTypes: true})).filter((f)=>{return !f.isDirectory()})
+	
 	for (const file of files) {
 		if(!file.name.endsWith(".md")){
 			continue
@@ -91,7 +107,7 @@ async function RecursivelyBuildIndex(thisFolder, offset){
 		if(folder.name.startsWith(".")){
 			continue
 		}
-		let addition = await RecursivelyBuildIndex(path.join(thisFolder, folder.name), path.join(offset, folder.name))
+		let addition = await RecursivelyBuildIndex(path.join(thisFolder, folder.name), path.join(offset, folder.name), inherit)
 		if(addition.files.length < 1 && addition.folders.length < 1){
 			continue
 		}
@@ -99,13 +115,23 @@ async function RecursivelyBuildIndex(thisFolder, offset){
 	}
 	return index
 }
+languageNames = {
+	en: "English",
+	ua: "українська",
+	zh: "简体中文"
+}
+function translateCodeToName(code){
+	return languageNames[code]? languageNames[code] : code
+}
+
+
 
 function copy_static() {
 	return gulp.src('./static/**').pipe(gulp.dest('./docs'))
 }
 
 function copy_images() {
-	return gulp.src('./build/upstream/assets/**').pipe(gulp.dest('./docs/assets/'))
+	return gulp.src('./build/upstream/**/assets/**').pipe(gulp.dest('./docs/'))
 }
 
 exports.default = gulp.series(clean, clone_docs, gulp.parallel(build_docs, copy_static, copy_images))

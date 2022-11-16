@@ -1,11 +1,18 @@
 mixin menuFolder(index, currentPath)
+
+	if index.meta.langs
+		- for (const folder of index.folders)
+			if currentPath.startsWith(folder.meta.language)
+				+menuFolder(folder, currentPath)
+		- return
+
 	div.directory
-		unless index.root 
+		unless index.meta.root
 			.directory-name
 				.span.material-symbols-rounded expand_more
 				span= index.name
 		else
-			img.menuimage(src="/retro-docs-site/assets/retrologo.png")
+			img.menuimage(src=`/retro-docs-site/${index.meta.language}/assets/retrologo.png`)
 		.subcontents
 			- for (const file of index.files)
 				- let link = file.path.replace(/\.[^/.]+$/, "")+".html"

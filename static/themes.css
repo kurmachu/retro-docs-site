@@ -1,0 +1,36 @@
+/* #region arithm */
+.theme-arithm {
+	--menu-link-background: #445dff0f;
+    --menu-link-foreground: #445dff;
+
+    --menu-link-background-hover: #445dff38;
+    --menu-link-foreground-hover: #445dff;
+
+    --menu-link-background-current: #445dff;
+    --menu-link-foreground-current: #ffffff;
+
+	--article-color-code-foreground: #ad5100;
+    --article-color-code-background: #ffa14d21;
+
+	--article-pre-border: #44ff6d;
+	--article-pre-background: #06150a;
+
+	--hljs-keyword: #42a3ff;
+	--hljs-string: #ffff65;
+	--hljs-comment: #44ff6d9e;
+
+	--toolbar-color: #000000b4;
+	--toolbar-hover-color: black;
+
+	--toolbar-lang-color: #ff624a;
+	--toolbar-theme-color: #16ce3e;
+	--toolbar-sync-color: #eccb0e;
+	--toolbar-info-color: #445dff;
+
+	--language-color: #610D00;
+	--theme-color: #064C16;
+	--sync-info-color: #302903;
+	--info-color: white;
+}
+/* #endregion */
+
