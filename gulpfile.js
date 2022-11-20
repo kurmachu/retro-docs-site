@@ -44,11 +44,14 @@ function build_docs(cb) {
 		})
 
 		let index = []
+
+		let themes = []
 		
 		let siteFunction = pug.compileFile('site.pug')
 
 		new Promise(async (resolve, reject)=>{
 			index = await RecursivelyBuildIndex("./build/upstream/", "/", {langs: true})
+			themes = await CollectThemes("./themes")
 			resolve()
 		}).then(()=>{new Promise((resolve, reject)=>{
 			gulp.src(["./build/upstream/**/*.md","./build/upstream/examples/**/*.md"])
@@ -59,7 +62,8 @@ function build_docs(cb) {
 					fileName: file.basename,
 					filePath: file.relative,
 					index: index,
-					fileLanguage: translateCodeToName(file.relative.split(path.sep)[0])
+					fileLanguage: translateCodeToName(file.relative.split(path.sep)[0]),
+					themeIndex: themes
 				}))
 			}))
 			.pipe(gulp.dest('./docs')).on('finish', ()=>{
@@ -125,6 +129,19 @@ function translateCodeToName(code){
 }
 
 
+async function CollectThemes(folder) {
+	let out = {}
+	let categories = await (await fs.readdir(folder, {withFileTypes: true})).filter((f)=>{return f.isDirectory()})
+	for (const category of categories) {
+		out[category.name] = []
+		let themes = await (await fs.readdir(folder+"/"+category.name, {withFileTypes: true})).filter((f)=>{return !f.isDirectory()})
+		for (const theme of themes) {
+			out[category.name].push(theme.name)
+		}
+	}
+	return out
+}
+
 
 function copy_static() {
 	return gulp.src('./static/**').pipe(gulp.dest('./docs'))
@@ -134,15 +151,20 @@ function copy_images() {
 	return gulp.src('./build/upstream/**/assets/**').pipe(gulp.dest('./docs/'))
 }
 
-exports.default = gulp.series(clean, clone_docs, gulp.parallel(build_docs, copy_static, copy_images))
+function copy_themes() {
+	return gulp.src('./themes/**/**').pipe(gulp.dest('./docs/themes'))
+}
+
+exports.default = gulp.series(clean, clone_docs, gulp.parallel(build_docs, copy_static, copy_images, copy_themes))
 exports.clean = clean
 exports.clone_docs = clone_docs
 exports.build_docs = build_docs
 exports.copy_static = copy_static
+exports.copy_themes = copy_themes
 
 
 var watchtask = function(done) {
-	gulp.watch(['static/**','site.pug','menu.pug'],{}, gulp.parallel(build_docs, copy_static))
+	gulp.watch(['static/**','site.pug','menu.pug', 'themes/**'],{}, gulp.parallel(build_docs, copy_static, copy_themes))
 	console.log("Now running watch. Quit node to stop.")
 	done()
 }

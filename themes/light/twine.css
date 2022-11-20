@@ -1,0 +1,53 @@
+/* Legacy theme, do not use as example. */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body {
+	--roundness: 0;
+	--layout-divider-width: 2px;
+	--layout-divider-color: #00000023;
+	--hr-color: #00000023;
+
+	--menu-link-background: transparent;
+	--menu-link-border: #0074da56;
+    --menu-link-foreground: #0075da;
+
+    --menu-link-background-hover: #0074da29;
+    --menu-link-foreground-hover: #0075da;
+
+    --menu-link-background-current: #0075da;
+    --menu-link-foreground-current: #ffffff;
+
+	--article-color-code-foreground: #00549c;
+    --article-color-code-background: #6ea6d71f;
+
+	--article-pre-color: black;
+	--article-pre-border: #0074da21;
+	--article-pre-background: #0074da0e;
+
+	--hljs-keyword: #0070d1;
+	--hljs-string: #9e6300;
+	--hljs-comment: #3900959e;
+
+	--toolbar-color: #000000b4;
+	--toolbar-hover-color: black;
+
+	--toolbar-lang-color: #0075da;
+	--toolbar-theme-color: #0075da;
+	/* --toolbar-sync-color: #eccb0e; */
+	--toolbar-info-color: #0075da;
+
+	--language-color: white;
+	--theme-color: white;
+	--sync-info-color: white;
+	--info-color: white;
+
+	font-family: 'Inter', sans-serif;
+	--code-font: RobotoMono, monospace;
+
+	--article-pre-border-thickness: 2px;
+}
+.theme-twine menu .directory a {
+	border: 1px solid var(--menu-link-border);
+}
+.theme-twine .layout-divider {
+	width: 2px;
+}

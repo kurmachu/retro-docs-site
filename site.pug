@@ -19,12 +19,13 @@ html(lang="en")
 		title= name
 
 		link(rel="stylesheet", href="/retro-docs-site/main.css")
-		link(rel="stylesheet", href="/retro-docs-site/themes.css")
 
 		link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200")
 		
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js", defer) 
 		script(src="/retro-docs-site/rgd.js", defer)
+
+		link#theme-zone(rel="stylesheet")
 	body
 		script(src="/retro-docs-site/theme-restore.js") 
 		menu
@@ -63,8 +64,10 @@ html(lang="en")
 							p 
 								span(style="margin-right: 3px") Current theme: 
 								select.theme-selector
-									option(value="theme-arithm") Arithm
-									option(value="theme-twine") Thread
+									- for (const category in themeIndex)
+										optgroup(label=category)
+											- for (const theme of themeIndex[category])
+												option(value=`/${category}/${theme}`)= theme.substring(0, theme.length - 4)
 						.tool-bubble-contents#c_info(style="display: none")
 							//- .fork-notification
 								+icon-label('alt_route')

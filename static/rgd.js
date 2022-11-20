@@ -97,11 +97,17 @@ addEventListener('load', ()=>{
 
 
 $('.theme-selector').on('change', function(){
-	$('body').removeClass((i, name)=>{
-		return name.startsWith("theme-")? name : ""
-	})
-	$('body').addClass($(this).val())
 	localStorage.setItem("theme", $(this).val())
+	let toRemove = $(`<style>
+		* {
+			transition: all 2s;
+		}
+	</style>`)
+	toRemove.appendTo($('body'))
+	document.getElementById("theme-zone").href = `/retro-docs-site/themes${localStorage.getItem("theme")}`
+	window.setTimeout(()=>{
+		$(toRemove).remove()
+	},2000)
 })
 
 $('.theme-selector').val(localStorage.getItem("theme"))
