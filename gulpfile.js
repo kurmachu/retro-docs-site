@@ -18,7 +18,7 @@ function clean(cb){
 
 function clone_docs() {
 	return new Promise((resolve, reject)=>{
-		git.clone('https://github.com/kurmachu/retro-gadgets-docs', {args: '-b refactor-languages ./build/upstream'}, function(err) {
+		git.clone('https://github.com/NexTre-dev/retro-gadgets-docs', {args: './build/upstream'}, function(err) {
 			if(err){reject(err)}else{resolve()}
   		});
 	})

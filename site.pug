@@ -31,8 +31,8 @@ html(lang="en")
 			.tools
 				.tool-dialogue
 					.tool-bubble.hidden
-						.tool-bubble-contents#c_sync(style="display: none")
-							.sync-fork-notification
+						//- .tool-bubble-contents#c_sync(style="display: none")
+							//- .sync-fork-notification
 								+icon-label('alt_route')
 									strong You're viewing a fork.
 								p To maintain functionality, changes to the official repository will temporarily not be reflected.
@@ -63,28 +63,40 @@ html(lang="en")
 								small The current theme is called
 									em "arithm"
 						.tool-bubble-contents#c_info(style="display: none")
-							.fork-notification
+							//- .fork-notification
 								+icon-label('alt_route')
 									strong You're viewing a fork.
 								p Changes won't be synced and edit links may not work.
 								hr
 							p Generated automatically from markdown.
-							+icon-label('edit')
-								a(href=`https://github.com/NexTre-dev/retro-gadgets-docs/blob/main/${filePath.substring(0, filePath.length - 4)}html`) Edit this page
+							.sync-area(style="margin-top:5px")
+								-
+									let offset = -8
+									let date = new Date(new Date().getTime() + offset * 3600*1000)
+								+icon-label('sync')
+									div
+										p Last Synced:
+										p(style="font-weight: 500")= "" + date.getUTCDate()+"/"+(((date.getUTCMonth()+1) < 10) ? ("0"+(date.getUTCMonth()+1)) : (date.getUTCMonth()+1))+"/"+date.getUTCFullYear()+" "+((date.getUTCHours() <= 12) ? ((date.getUTCHours()==0)? '12' : date.getUTCHours() ) : (date.getUTCHours()-12))+":"+((date.getUTCMinutes() < 10) ? "0"+date.getUTCMinutes() : date.getUTCMinutes())+((date.getUTCHours() < 12) ? "am" : "pm") + " PST"
+										p(style="font-size: 0.8em") Syncs automatically at ~12:30am PST
+							hr
+							+icon-label('edit_document')
+								a(href=`https://github.com/NexTre-dev/retro-gadgets-docs/blob/main/${filePath.substring(0, filePath.length - 4)}md`) Edit this page
 							+icon-label('report')
 								a(href="https://github.com/NexTre-dev/retro-gadgets-docs/issues") Submit an issue
 							hr
+							+icon-label('description')
+								a(href="https://github.com/NexTre-dev/retro-gadgets-docs") Documentation Repository
 							+icon-label('code')
 								a(href="https://github.com/kurmachu/retro-docs-site") Viewer Source
 					.tool-dialogue-arrow-area
 						.dialogue-arrow.lang
 						.dialogue-arrow.theme
-						.dialogue-arrow.sync
+						//- .dialogue-arrow.sync
 						.dialogue-arrow.info
 				.toolbar
 					p.toolbarIcon.material-symbols-rounded.lang(data-is="lang", data-open="c_lang") Language
 					p.toolbarIcon.material-symbols-rounded.theme(data-is="theme", data-open="c_theme") Palette
-					p.toolbarIcon.material-symbols-rounded.sync(data-is="sync", data-open="c_sync") Sync_Problem
+					//- p.toolbarIcon.material-symbols-rounded.sync(data-is="sync", data-open="c_sync") Sync
 					p.toolbarIcon.material-symbols-rounded.info(data-is="info", data-open="c_info") Info
 		.layout-divider
 		article
