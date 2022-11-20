@@ -75,9 +75,9 @@ body {
 	--toolbar-info-color: #ffffff;
 
 	/* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
-	--language-color: #610D00;
-	--theme-color: #064C16;
-	--sync-info-color: #302903;
+	--language-color: #0a0330;
+	--theme-color: #0a0330;
+	--sync-info-color: #0a0330;
 	--info-color: #0a0330;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
