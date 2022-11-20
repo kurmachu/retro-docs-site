@@ -108,6 +108,23 @@ $('.theme-selector').on('change', function(){
 	// window.setTimeout(()=>{
 	// 	$(toRemove).remove()
 	// },1000)
+	updateThemeMeta()
 })
 
+function updateThemeMeta(){
+	let meta = $('.theme-selector option:selected').data("meta")
+	if(meta){
+		$('.theme-meta-none').css('display', 'none')
+		$('.theme-meta-zone').css('display', '')
+
+		$('#theme-meta-ver-warning').css('display', meta.ver>=1? 'none':'')
+		$('#theme-meta-author').text(meta.author)
+		$('#theme-meta-description').text(meta.description? meta.description : "")
+	}else{
+		$('.theme-meta-none').css('display', '')
+		$('.theme-meta-zone').css('display', 'none')
+	}
+}
+
 $('.theme-selector').val(localStorage.getItem("theme"))
+updateThemeMeta()

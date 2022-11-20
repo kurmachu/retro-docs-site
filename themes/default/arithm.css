@@ -1,3 +1,8 @@
+/* [THEME META] {"ver":1, "author":"SYSTEM", "description":"The default theme! Welcoming, readable, and logo-centric."} */
+/* Theme meta needs to be the first line in your theme, if you want to provide it.
+   It must be valid JSON, must remain one line, and you must have the proper spacing before and after the JSON as shown above. 
+   You must at the minimum provide ver (theme system version, currently 1) and author. You may also provide description.*/
+
 /* Import any fonts you need */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap');
 

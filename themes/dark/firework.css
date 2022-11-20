@@ -1,3 +1,5 @@
+/* [THEME META] {"ver":1, "author":"Kurmachu", "description":"Calm gradients and blurry backgrounds."} */
+
 /* Import any fonts you need */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
@@ -92,7 +94,7 @@ body {
 	--sync-info-color: white;
 	--info-color: white;
 }
-menu .directory a, article :not(pre) > code, article pre {
+menu .directory a, article :not(pre) > code, article pre, article table, .tool-bubble {
 	backdrop-filter: blur(100px);
 }
 article hr {
@@ -122,4 +124,9 @@ article hr {
 }
 .toolbarIcon.info.selected {
 	color: #1fdbff;
+}
+article table {
+	background-color: #ffffff05;
+	padding: 10px;
+	border-radius: 10px;
 }

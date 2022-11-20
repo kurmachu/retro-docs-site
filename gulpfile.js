@@ -136,7 +136,12 @@ async function CollectThemes(folder) {
 		out[category.name] = []
 		let themes = await (await fs.readdir(folder+"/"+category.name, {withFileTypes: true})).filter((f)=>{return !f.isDirectory()})
 		for (const theme of themes) {
-			out[category.name].push(theme.name)
+			let meta = null
+			let topLine = (await fs.readFile(`${folder}/${category.name}/${theme.name}`)).toString().split(/\r?\n/)[0]
+			if(topLine.startsWith("/* [THEME META] ")){
+				meta = topLine.substring("/* [THEME META] ".length, topLine.length - " */".length)
+			}
+			out[category.name].push({name: theme.name, meta: meta})
 		}
 	}
 	return out
