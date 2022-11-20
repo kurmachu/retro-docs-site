@@ -94,3 +94,14 @@ new ResizeObserver(entries => {
 addEventListener('load', ()=>{
 	$('.tools').width(0).width($('menu').width())
 })
+
+
+$('.theme-selector').on('change', function(){
+	$('body').removeClass((i, name)=>{
+		return name.startsWith("theme-")? name : ""
+	})
+	$('body').addClass($(this).val())
+	localStorage.setItem("theme", $(this).val())
+})
+
+$('.theme-selector').val(localStorage.getItem("theme"))

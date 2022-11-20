@@ -25,7 +25,8 @@ html(lang="en")
 		
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js", defer) 
 		script(src="/retro-docs-site/rgd.js", defer)
-	body.theme-arithm
+	body
+		script(src="/retro-docs-site/theme-restore.js") 
 		menu
 			+menuFolder(index, filePath)
 			.tools
@@ -57,11 +58,13 @@ html(lang="en")
 								small 
 									strong Language missing or incomplete? <a href="https://github.com/NexTre-dev/retro-gadgets-docs">Submit an issue or help translate.</a>
 						.tool-bubble-contents#c_theme(style="display: none")
-							+icon-label('pending')
-								strong There aren't any other themes yet.
+							+icon-label('warning')
+								strong Theme selection is still in beta
 							p 
-								small The current theme is called
-									em "arithm"
+								span(style="margin-right: 3px") Current theme: 
+								select.theme-selector
+									option(value="theme-arithm") Arithm
+									option(value="theme-twine") Thread
 						.tool-bubble-contents#c_info(style="display: none")
 							//- .fork-notification
 								+icon-label('alt_route')

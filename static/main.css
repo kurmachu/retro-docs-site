@@ -5,7 +5,7 @@
 	'GRAD' 0,
 	'opsz' 48;
 }
-@font-face {
+/* @font-face {
 	font-family: Montserrat;
 	src: url(Montserrat-VariableFont_wght.ttf);
 	font-weight: 1 999;
@@ -14,15 +14,14 @@
 	font-family: RobotoMono;
 	src: url(RobotoMono-VariableFont_wght.ttf);
 	font-weight: 1 999;
-}
+} */
 
 
 :root {
-	font-family: Montserrat, sans-serif;
 	height: 100%;
 }
 code {
-	font-family: RobotoMono, monospace;
+	font-family: var(--code-font);
 }
 
 body {
@@ -58,7 +57,7 @@ menu .directory a {
 	color: var(--menu-link-foreground);
 	transition: color 0.3s, background-color 0.3s;
 }
-menu .directory a:hover {
+menu .directory a:hover:not(.current) {
 	background-color: var(--menu-link-background-hover);
 	color: var(--menu-link-foreground-hover);
 }
@@ -107,7 +106,7 @@ menu a.current {
 	margin: 10px 10px;
 	width: 3px;
 	border-radius: 10px;
-	background-color: rgba(0, 0, 0, 0.158);
+	background-color: var(--layout-divider-color)
 }
 
 
@@ -138,7 +137,7 @@ article hr {
 	border: none;
 	height: 2px;
 	border-radius: 10px;
-	background-color: rgba(0, 0, 0, 0.158);
+	background-color: var(--hr-color);
 }
 article h3 {
 	font-weight: 500;
@@ -160,7 +159,7 @@ article pre {
 }
 article pre > code {
 	background-color: transparent;
-    color: white;
+    color: var(--article-pre-color);
     padding: 3px;
     border-radius: 6px;
 }
@@ -303,4 +302,16 @@ article pre > code {
 }
 .icon-label-text {
 	margin-left: 8px;
+}
+
+.theme-selector {
+	border-radius: 5px;
+    font-family: inherit;
+    background: none;
+    border: 1px solid var(--pass-back);
+    color: inherit;
+    padding: 4px;
+}
+.theme-selector option {
+	color: black
 }
