@@ -61,13 +61,29 @@ html(lang="en")
 						.tool-bubble-contents#c_theme(style="display: none")
 							+icon-label('warning')
 								strong Theme selection is still in beta
+							hr
 							p 
 								span(style="margin-right: 3px") Current theme: 
 								select.theme-selector
 									- for (const category in themeIndex)
 										optgroup(label=category)
 											- for (const theme of themeIndex[category])
-												option(value=`/${category}/${theme}`)= theme.substring(0, theme.length - 4)
+												option(value=`/${category}/${theme.name}`,data-meta=theme.meta)= theme.name.substring(0, theme.name.length - 4)
+							
+							.theme-meta-zone(style="display: none; margin-top: 5px;")
+								#theme-meta-ver-warning 
+									+icon-label('warning')
+										small This theme has not been updated to the latest specifications, and may display incorrectly.
+								p#theme-meta-description
+								+icon-label('person')
+										p Contributed by 
+											strong#theme-meta-author
+							.theme-meta-none(style="display: none; margin-top: 5px;")
+								+icon-label('warning')
+									p Legacy theme? No meta provided.
+							hr
+							p 
+								small Want to contribute a theme? <a href="https://github.com/kurmachu/retro-docs-site/pulls">Open a Pull Request to the viewer repository.</a>
 						.tool-bubble-contents#c_info(style="display: none")
 							//- .fork-notification
 								+icon-label('alt_route')
