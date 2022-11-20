@@ -39,6 +39,11 @@ body {
 	--hr-color: rgba(0, 0, 0, 0.158);
     
 	/* Onto the article! */
+	/* Links */
+	--article-link-color: #445dff;
+	--article-link-color-hover: #445dffb9;
+	--article-link-color-active: #ffa14d;
+
 	/* Code segments (mono inlines) */
 	--article-color-code-foreground: #ad5100;
     --article-color-code-background: #ffa14d21;

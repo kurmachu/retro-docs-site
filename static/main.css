@@ -148,6 +148,16 @@ article code {
     padding: 1px 5px;
     border-radius: calc(6px * var(--roundness));
 }
+article a {
+	color: var(--article-link-color);
+	transition: color 0.3s;
+}
+article a:hover {
+	color: var(--article-link-color-hover)
+}
+article a:active {
+	color: var(--article-link-color-active)
+}
 article pre {
 	background-color: var(--article-pre-background);
     border: var(--article-pre-border-thickness) solid var(--article-pre-border);
