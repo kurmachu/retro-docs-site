@@ -3,8 +3,6 @@ name: NodeJS with Gulp for Pages
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
   workflow_dispatch:
   schedule:
     - cron: '30 8 * * *'
