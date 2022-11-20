@@ -19,16 +19,16 @@ body {
 	/* Let's start left-to-right, top to bottom. */
 	/* First, the menu colors */
 	/* Unselected */
-	--menu-link-background: #445dff0f;
-    --menu-link-foreground: #445dff; 
+	--menu-link-background: #ffffff;
+    --menu-link-foreground: #0022ff; 
 
 	/* Hover */
 	--menu-link-background-hover: #0022ff38;
     --menu-link-foreground-hover: #9da9f5;
 
 	/* Current page */
-	--menu-link-background-current: #445dff;
-    --menu-link-foreground-current: #ffffff;
+	--menu-link-background-current: #ffffffea;
+    --menu-link-foreground-current: #13007c;
 
 	/* Next, the dividers! */
 	/* This is the divider between the menu and the page */
@@ -40,13 +40,13 @@ body {
     
 	/* Onto the article! */
 	/* Links */
-	--article-link-color: #909fff;
-	--article-link-color-hover: #00107ab9;
+	--article-link-color: #ffffff;
+	--article-link-color-hover: #00eeff;
 	--article-link-color-active: #00eeff;
 
 	/* Code segments (mono inlines) */
-	--article-color-code-foreground: #00ada4;
-    --article-color-code-background: #ffa14d21;
+	--article-color-code-foreground: #001aad;
+    --article-color-code-background: #ffffff;
 
 	/* Full code blocks (formatted segments) */
 	--article-pre-color: white;
@@ -69,15 +69,15 @@ body {
 	--toolbar-hover-color: black;
 
 	/* Highlight color for each section (used as background for it and for the icon) */
-	--toolbar-lang-color: #ff624a;
-	--toolbar-theme-color: #16ce3e;
-	--toolbar-sync-color: #eccb0e;
-	--toolbar-info-color: #445dff;
+	--toolbar-lang-color: #ffffff;
+	--toolbar-theme-color: #ffffff;
+	--toolbar-sync-color: #ffffff;
+	--toolbar-info-color: #ffffff;
 
 	/* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
 	--language-color: #610D00;
 	--theme-color: #064C16;
 	--sync-info-color: #302903;
-	--info-color: white;
+	--info-color: #0a0330;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
