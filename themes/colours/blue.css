@@ -23,8 +23,8 @@ body {
     --menu-link-foreground: #445dff; 
 
 	/* Hover */
-	--menu-link-background-hover: #445dff38;
-    --menu-link-foreground-hover: #445dff;
+	--menu-link-background-hover: #0022ff38;
+    --menu-link-foreground-hover: #9da9f5;
 
 	/* Current page */
 	--menu-link-background-current: #445dff;
@@ -40,12 +40,12 @@ body {
     
 	/* Onto the article! */
 	/* Links */
-	--article-link-color: #445dff;
-	--article-link-color-hover: #445dffb9;
-	--article-link-color-active: #ffa14d;
+	--article-link-color: #909fff;
+	--article-link-color-hover: #00107ab9;
+	--article-link-color-active: #00eeff;
 
 	/* Code segments (mono inlines) */
-	--article-color-code-foreground: #ad5100;
+	--article-color-code-foreground: #00ada4;
     --article-color-code-background: #ffa14d21;
 
 	/* Full code blocks (formatted segments) */
