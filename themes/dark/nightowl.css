@@ -78,6 +78,13 @@ body {
   --theme-color: #f0e4eb;
   --sync-info-color: #302903;
   --info-color: white;
+
+  /* Nightowl glow colours */
+  --keyword-glow: #e3e347a7;
+  --link-glow: #eaeb903d;
+  --code-text-glow: #e06ab0a7;
+  --code-inline-glow: #c60076a7;
+  --emphasis-glow: #ffffff0a;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
 
@@ -85,26 +92,38 @@ body {
   /* text-shadow: rgb(255, 206, 122) 0px 0px 9px;
    */
   text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
-      8px #eaeb90a7,
-    0 0 4px #eaeb90a7, 0 0 8px #eaeb90a7, 0 0 12px #eaeb90a7, 0 0 16px #eaeb90a7;
+      4px var(--keyword-glow),
+    0 0 6px var(--keyword-glow), 0 0 8px var(--keyword-glow),
+    0 0 10px var(--keyword-glow), 0 0 12px var(--keyword-glow);
+}
+
+article a {
+  text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
+      2px var(--link-glow),
+    0 0 3px var(--link-glow), 0 0 4px var(--link-glow), 0 0 5px var(--link-glow),
+    0 0 6px var(--link-glow);
+  text-decoration: none;
 }
 
 pre code {
   text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
-      8px #e06ab0a7,
-    0 0 4px #e06ab0a7, 0 0 8px #e06ab0a7, 0 0 12px #e06ab0a7, 0 0 16px #e06ab0a7;
+      8px var(--code-text-glow),
+    0 0 4px var(--code-text-glow), 0 0 8px var(--code-text-glow),
+    0 0 12px var(--code-text-glow), 0 0 16px var(--code-text-glow);
 }
 
 h3 code,
+h4 code,
 p code {
   text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
-      8px #c60076a7,
-    0 0 4px #c60076a7, 0 0 8px #c60076a7, 0 0 12px #c60076a7, 0 0 16px #c60076a7;
+      8px var(--code-inline-glow),
+    0 0 4px var(--code-inline-glow), 0 0 8px var(--code-inline-glow),
+    0 0 12px var(--code-inline-glow), 0 0 16px var(--code-inline-glow);
 }
 
 strong {
-  padding-left: 10px;
   text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
-      8px #ffffff0a,
-    0 0 4px #ffffff0a, 0 0 8px #ffffff0a, 0 0 12px #ffffff0a, 0 0 16px #ffffff0a; /* maybe a bit too subtle? */
+      8px var(--emphasis-glow),
+    0 0 4px var(--emphasis-glow), 0 0 8px var(--emphasis-glow),
+    0 0 12px var(--emphasis-glow), 0 0 16px var(--emphasis-glow); /* maybe a bit too subtle? */
 }
