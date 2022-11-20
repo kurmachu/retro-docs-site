@@ -1,6 +1,7 @@
 /* Legacy theme, do not use as example. */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 body {
+	background-color: white;
 	--roundness: 0;
 	--layout-divider-width: 2px;
 	--layout-divider-color: #00000023;
@@ -44,6 +45,9 @@ body {
 	--code-font: RobotoMono, monospace;
 
 	--article-pre-border-thickness: 2px;
+	--article-link-color: #0075da;
+	--article-link-color-hover: #005aa8;
+	--article-link-color-active: #0082f4;
 }
 .theme-twine menu .directory a {
 	border: 1px solid var(--menu-link-border);
