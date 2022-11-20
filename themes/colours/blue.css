@@ -54,8 +54,8 @@ body {
 	--article-pre-border-thickness: 2px;
 	--article-pre-background: #06150a;
 	/* Formatted code keywords! */
-	--hljs-keyword: #42a3ff;
-	--hljs-string: #ffff65;
+	--hljs-keyword: #ef42ff;
+	--hljs-string: #65e8ff;
 	--hljs-comment: #44ff6d9e;
 	--hljs-title: white;
 	--hljs-params: white;
