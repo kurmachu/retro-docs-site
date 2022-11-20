@@ -1,1 +1,66 @@
-/* one dark */
+/* One Dark Theme By: woooferz */
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+body {
+  background-color: #282c34;
+  color: #abb2bf;
+
+  --roundness: 1;
+
+  font-family: Montserrat, sans-serif;
+  --code-font: "JetBrains Mono", monospace;
+
+  --menu-link-background: #56b6c20f;
+  --menu-link-foreground: #56b6c2;
+
+  --menu-link-background-hover: #61afef38;
+  --menu-link-foreground-hover: #61afef;
+
+  --menu-link-background-current: #c678dd38;
+  --menu-link-foreground-current: #c678dd;
+
+  --layout-divider-color: #abb2bfba;
+  --layout-divider-width: 2px;
+
+  --hr-color: #abb2bfba;
+
+  --article-link-color: #61afef;
+  --article-link-color-hover: #61afefb9;
+  --article-link-color-active: #d19a66;
+
+  --article-color-code-foreground: #e06c75;
+  --article-color-code-background: #4b5263b9;
+
+  /* Full code blocks (formatted segments) */
+  --article-pre-color: #abb2bf;
+  --article-pre-border: #98c379;
+  --article-pre-border-thickness: 2px;
+  --article-pre-background: #191b20;
+  /* Formatted code keywords! */
+  --hljs-keyword: #61afef;
+  --hljs-string: #e5c07b;
+  --hljs-comment: #5c6370;
+  --hljs-title: #56b6c2;
+  --hljs-params: #abb2bf;
+  --hljs-number: #be5046;
+  --hljs-built_in: #c678dd;
+  --hljs-literal: #98c379;
+
+  /* Onto the toolbar, at the bottom of the menu */
+  /* Color for the icons when not selected */
+  --toolbar-color: #abb2bfb4;
+  --toolbar-hover-color: #abb2bf;
+
+  /* Highlight color for each section (used as background for it and for the icon) */
+  --toolbar-lang-color: #e06c75;
+  --toolbar-theme-color: #98c379;
+  --toolbar-sync-color: #e5c07b;
+  --toolbar-info-color: #c678dd;
+
+  /* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
+  --language-color: white;
+  --theme-color: white;
+  --sync-info-color: white;
+  --info-color: white;
+}
