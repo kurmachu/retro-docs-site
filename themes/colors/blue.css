@@ -1,8 +1,4 @@
-/* [THEME META] {"ver":1, "author":"SYSTEM", "description":"The default theme! Welcoming, readable, and logo-centric."} */
-/* Theme meta needs to be the first line in your theme, if you want to provide it.
-   It must be valid JSON, must remain one line, and you must have the proper spacing before and after the JSON as shown above. 
-   You must at the minimum provide ver (theme system version, currently 1) and author. You may also provide description.
-   If you'd like to opt-out of accessibility checks, add "accessibility":"ignore". If your theme is high-contrast or otherwise meant for accessibility, add "accessibility":"optimized"*/
+/* [THEME META] {"ver":1, "author":"donut28"} */
 
 /* Import any fonts you need */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap');
@@ -10,8 +6,8 @@
 /* Define most theme properties here */
 body {
 	/* Basic properties applied to the body */
-	background-color: white;
-	color: black;
+	background-color: rgb(62, 111, 218);
+	color: rgb(255, 255, 255);
 
 	/* Be sure to check the accessability of your theme! */
 
@@ -25,16 +21,16 @@ body {
 	/* Let's start left-to-right, top to bottom. */
 	/* First, the menu colors */
 	/* Unselected */
-	--menu-link-background: #445dff0f;
-    --menu-link-foreground: #445dff; 
+	--menu-link-background: #ffffff;
+    --menu-link-foreground: #0022ff; 
 
 	/* Hover */
-	--menu-link-background-hover: #445dff38;
-    --menu-link-foreground-hover: #445dff;
+	--menu-link-background-hover: #0022ff38;
+    --menu-link-foreground-hover: #9da9f5;
 
 	/* Current page */
-	--menu-link-background-current: #445dff;
-    --menu-link-foreground-current: #ffffff;
+	--menu-link-background-current: #ffffffea;
+    --menu-link-foreground-current: #13007c;
 
 	/* Next, the dividers! */
 	/* This is the divider between the menu and the page */
@@ -46,13 +42,13 @@ body {
     
 	/* Onto the article! */
 	/* Links */
-	--article-link-color: #445dff;
-	--article-link-color-hover: #445dffb9;
-	--article-link-color-active: #ffa14d;
+	--article-link-color: #ffffff;
+	--article-link-color-hover: #00eeff;
+	--article-link-color-active: #00eeff;
 
 	/* Code segments (mono inlines) */
-	--article-color-code-foreground: #ad5100;
-    --article-color-code-background: #ffa14d21;
+	--article-color-code-foreground: #001aad;
+    --article-color-code-background: #ffffff;
 
 	/* Full code blocks (formatted segments) */
 	--article-pre-color: white;
@@ -60,8 +56,8 @@ body {
 	--article-pre-border-thickness: 2px;
 	--article-pre-background: #06150a;
 	/* Formatted code keywords! */
-	--hljs-keyword: #42a3ff;
-	--hljs-string: #ffff65;
+	--hljs-keyword: #ef42ff;
+	--hljs-string: #65e8ff;
 	--hljs-comment: #44ff6d9e;
 	--hljs-title: white;
 	--hljs-params: white;
@@ -75,15 +71,15 @@ body {
 	--toolbar-hover-color: black;
 
 	/* Highlight color for each section (used as background for it and for the icon) */
-	--toolbar-lang-color: #ff624a;
-	--toolbar-theme-color: #16ce3e;
-	--toolbar-sync-color: #eccb0e;
-	--toolbar-info-color: #445dff;
+	--toolbar-lang-color: #ffffff;
+	--toolbar-theme-color: #ffffff;
+	--toolbar-sync-color: #ffffff;
+	--toolbar-info-color: #ffffff;
 
 	/* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
-	--language-color: #610D00;
-	--theme-color: #064C16;
-	--sync-info-color: #302903;
-	--info-color: white;
+	--language-color: #0a0330;
+	--theme-color: #0a0330;
+	--sync-info-color: #0a0330;
+	--info-color: #0a0330;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */

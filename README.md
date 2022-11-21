@@ -13,16 +13,16 @@ Then, install the modules locally. From the cloned repository:
 npm install
 ```
 ## Build and run
-VSCode is recommended as a Go Live config is used to properly preview the site.
+VSCode is recommended as a **Live Server** config is used to properly preview the site.
  - To build everything once, use `gulp` or `gulp default`.
  - To build everything and auto-build on changes to static files and existing themes, use `gulp watch`. *\*may be broken*
  - To see other possible tasks, use `gulp --tasks`.
 
-Once built, launch Go Live and navigate into the `docs` folder to preview the site.
+Once built, launch Live Server with the **Go Live** button and navigate into the `docs` folder to preview the site.
 
 ## Themes
 Themes are placed in catagories in the themes folder and automatically added to the list on full build, you can copy [Arithm](https://github.com/kurmachu/retro-docs-site/blob/master/themes/default/arithm.css) for commented properties and examples.
 
-Please ensure themes are accesible (using devtools, or [WebAIM](https://webaim.org/resources/contrastchecker/)), unless you specifically state a theme as not meant to be accessible.
+Please ensure themes are accessible (using devtools, or [WebAIM](https://webaim.org/resources/contrastchecker/)), unless you specifically state a theme as not meant to be accessible.
 
-Of couse, you can add any css to the themes! You arn't just limited to the variables.
+Of course, you can add any css to the themes! You aren't just limited to the variables.

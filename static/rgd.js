@@ -120,6 +120,22 @@ function updateThemeMeta(){
 		$('#theme-meta-ver-warning').css('display', meta.ver>=1? 'none':'')
 		$('#theme-meta-author').text(meta.author)
 		$('#theme-meta-description').text(meta.description? meta.description : "")
+
+
+		meta.accessibility = meta.accessibility? meta.accessibility : ""
+		switch(meta.accessibility.toLowerCase()) {
+			case "ignore":
+				$('#theme-meta-accessibility-notice').css('display', '')
+				$('#theme-meta-accessibility-notice-text').html("<strong>This theme has opted-out of accessibility checks</strong><br><small>It may not be suitable for the visually impaired.</small>")
+				break;
+			case "optimized":
+				$('#theme-meta-accessibility-notice').css('display', '')
+				$('#theme-meta-accessibility-notice-text').html("<strong>This theme is optimized for accessibility</strong>")
+				break;
+			default:
+				$('#theme-meta-accessibility-notice').css('display', 'none')
+				break;
+		}
 	}else{
 		$('.theme-meta-none').css('display', '')
 		$('.theme-meta-zone').css('display', 'none')
