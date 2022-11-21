@@ -144,3 +144,9 @@ function updateThemeMeta(){
 
 $('.theme-selector').val(localStorage.getItem("theme"))
 updateThemeMeta()
+
+if($('.theme-selector').val()==null){
+	localStorage.setItem("theme","/default/arithm.css")
+	$('.theme-selector').val("/default/arithm.css")
+	document.getElementById("theme-zone").href = `/retro-docs-site/themes${localStorage.getItem("theme")}`
+}
