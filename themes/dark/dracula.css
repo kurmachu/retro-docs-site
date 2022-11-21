@@ -1,0 +1,89 @@
+/* [THEME META] {"ver":1, "author":"woooferz", "description":"Dracula Theme (pretty cool)", "accessibility":"optimized"} */
+/* Theme meta needs to be the first line in your theme, if you want to provide it.
+   It must be valid JSON, must remain one line, and you must have the proper spacing before and after the JSON as shown above. 
+   You must at the minimum provide ver (theme system version, currently 1) and author. You may also provide description.
+   If you'd like to opt-out of accessibility checks, add "accessibility":"ignore". If your theme is high-contrast or otherwise meant for accessibility, add "accessibility":"optimized"*/
+
+/* Import any fonts you need */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap");
+
+/* Define most theme properties here */
+body {
+  /* Basic properties applied to the body */
+  background-color: #282a36;
+  color: #f8f8f2;
+
+  /* Be sure to check the accessability of your theme! */
+
+  /* Theme properties */
+  --roundness: 1; /* How round is this theme? Applied automatically to borders. Unitless */
+
+  /* Fonts! */
+  font-family: Montserrat, sans-serif;
+  --code-font: RobotoMono, monospace;
+
+  /* Let's start left-to-right, top to bottom. */
+  /* First, the menu colors */
+  /* Unselected */
+  --menu-link-background: #8be9fd0f;
+  --menu-link-foreground: #8be9fd;
+
+  /* Hover */
+  --menu-link-background-hover: #8be9fd38;
+  --menu-link-foreground-hover: #8be9fd;
+
+  /* Current page */
+  --menu-link-background-current: #ffb86c;
+  --menu-link-foreground-current: #474747;
+
+  /* Next, the dividers! */
+  /* This is the divider between the menu and the page */
+  --layout-divider-color: rgba(255, 255, 255, 0.158);
+  --layout-divider-width: 3px;
+
+  /* This is the color of hrs (including the title hr) */
+  --hr-color: rgba(255, 255, 255, 0.158);
+
+  /* Onto the article! */
+  /* Links */
+  --article-link-color: #8be9fd;
+  --article-link-color-hover: #8be9fdb9;
+  --article-link-color-active: #ffb86c;
+
+  /* Code segments (mono inlines) */
+  --article-color-code-foreground: #ffb86c;
+  --article-color-code-background: #ad590021;
+
+  /* Full code blocks (formatted segments) */
+  --article-pre-color: #f8f8f2;
+  --article-pre-border: #50fa7b;
+  --article-pre-border-thickness: 2px;
+  --article-pre-background: #282a36;
+  /* Formatted code keywords! */
+  --hljs-keyword: #8be9fd;
+  --hljs-string: #bd93f9;
+  --hljs-comment: #50fa7b;
+  --hljs-title: #f8f8f2;
+  --hljs-params: #f8f8f2;
+  --hljs-number: #ff5555;
+  --hljs-built_in: #f8f8f2;
+  --hljs-literal: #bd93f9;
+
+  /* Onto the toolbar, at the bottom of the menu */
+  /* Color for the icons when not selected */
+  --toolbar-color: #f8f8f2b4;
+  --toolbar-hover-color: #f8f8f2;
+
+  /* Highlight color for each section (used as background for it and for the icon) */
+  --toolbar-lang-color: #ff5555;
+  --toolbar-theme-color: #50fa7b;
+  --toolbar-sync-color: #f1fa8c;
+  --toolbar-info-color: #8be9fd;
+
+  /* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
+  --language-color: #282a36;
+  --theme-color: #282a36;
+  --sync-info-color: #282a36;
+  --info-color: #282a36;
+}
+/* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
