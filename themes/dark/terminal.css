@@ -25,8 +25,8 @@ body {
     --menu-link-foreground: #2bff00; 
 
 	/* Hover */
-	--menu-link-background-hover: #0a7a00;
-    --menu-link-foreground-hover: #33ff00;
+	--menu-link-background-hover: #075700;
+    --menu-link-foreground-hover: #ffffff;
 
 	/* Current page */
 	--menu-link-background-current: #00ff0eea;
