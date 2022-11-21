@@ -47,7 +47,7 @@ body {
 	--article-link-color-active: #15ff00;
 
 	/* Code segments (mono inlines) */
-	--article-color-code-foreground: #23ad00;
+	--article-color-code-foreground: #030702;
     --article-color-code-background: #00ff0d;
 
 	/* Full code blocks (formatted segments) */
