@@ -25,14 +25,14 @@ body {
 	/* First, the menu colors */
 	/* Unselected */
 	--menu-link-background: #445dff0f;
-    --menu-link-foreground: #445dff; 
+    --menu-link-foreground: #0A2BFF; 
 
 	/* Hover */
 	--menu-link-background-hover: #445dff38;
-    --menu-link-foreground-hover: #445dff;
+    --menu-link-foreground-hover: #0A2BFF;
 
 	/* Current page */
-	--menu-link-background-current: #445dff;
+	--menu-link-background-current: #0A2BFF;
     --menu-link-foreground-current: #ffffff;
 
 	/* Next, the dividers! */
@@ -45,7 +45,7 @@ body {
     
 	/* Onto the article! */
 	/* Links */
-	--article-link-color: #445dff;
+	--article-link-color: #0A2BFF;
 	--article-link-color-hover: #445dffb9;
 	--article-link-color-active: #ffa14d;
 
@@ -77,7 +77,7 @@ body {
 	--toolbar-lang-color: #ff624a;
 	--toolbar-theme-color: #16ce3e;
 	--toolbar-sync-color: #eccb0e;
-	--toolbar-info-color: #445dff;
+	--toolbar-info-color: #0A2BFF;
 
 	/* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
 	--language-color: #610D00;
@@ -87,20 +87,20 @@ body {
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
 .toolbarIcon.selected.theme {
-	color: #445dff;
+	color: #0A2BFF;
 }
 .tool-bubble.theme {
-	background-color: #445dff;
+	background-color: #0A2BFF;
     color: #CCCCCC;
     --pass-back: #CCCCCC;
 }
 .tool-bubble.lang {
-	background-color: #445dff;
+	background-color: #0A2BFF;
     color: #CCCCCC;
     --pass-back: #CCCCCC;
 }
 .tool-bubble.info {
-	background-color: #445dff;
+	background-color: #0A2BFF;
     color: #CCCCCC;
     --pass-back: #CCCCCC;
 }
@@ -108,13 +108,13 @@ body {
     color: #CCCCCC;
 }
 .dialogue-arrow.selected.lang {
-    background-color: #445dff;
+    background-color: #0A2BFF;
 }
 .dialogue-arrow.selected.theme {
-    background-color: #445dff;
+    background-color: #0A2BFF;
 }
 .dialogue-arrow.selected.info {
-    background-color: #445dff;
+    background-color: #0A2BFF;
 }
 .toolbar .toolbarIcon {
     font-size: inherit;
@@ -123,11 +123,11 @@ body {
     user-select: none;
 }
 .toolbarIcon.selected.lang {
-    color: #445dff;
+    color: #0A2BFF;
 }
 .toolbarIcon.selected.theme {
-    color: #445dff;
+    color: #0A2BFF;
 }
 .toolbarIcon.selected.info {
-    color: #445dff;
+    color: #0A2BFF;
 }
