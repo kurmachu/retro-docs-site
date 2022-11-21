@@ -4,7 +4,7 @@
    You must at the minimum provide ver (theme system version, currently 1) and author. You may also provide description.*/
 
 /* Import any fonts you need */
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 /* Define most theme properties here */
 body {
