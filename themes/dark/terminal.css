@@ -1,7 +1,7 @@
 /* [THEME META] {"ver":1, "author":"donut28", "description":"Feel like a hacker with this customised dark theme."} */
 
 /* Import any fonts you need */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 /* Define most theme properties here */
 body {
@@ -15,7 +15,7 @@ body {
 	--roundness: 1; /* How round is this theme? Applied automatically to borders. Unitless */
 
 	/* Fonts! */
-	font-family: Montserrat, sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	--code-font: RobotoMono, monospace;
 
 	/* Let's start left-to-right, top to bottom. */
