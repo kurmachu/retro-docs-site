@@ -1,0 +1,133 @@
+/* [THEME META] {"ver":1, "author":"donut28", "description":"Blue but with Discord light mode mixed in. Will make you blind."} */
+
+/* Import any fonts you need */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet');
+
+/* Define most theme properties here */
+body {
+	/* Basic properties applied to the body */
+	/* background: 
+	radial-gradient(circle at 0px 0px, rgba(17, 115, 157, 0.301), transparent 50%),
+	radial-gradient(circle at 100% 100%, rgba(17, 115, 157, 0.192), transparent 30%),
+	radial-gradient(circle at 80% 27%, rgba(233, 26, 212, 0.175), transparent 80%),
+	radial-gradient(circle at 20% 80%, rgba(15, 220, 186, 0.205), transparent 100%),
+	linear-gradient(black, black); */
+	background: 
+	radial-gradient(circle at 0px 0px, #445dff3a, transparent 100%), 
+	radial-gradient(circle at 100% 100%, #5144ff1b, transparent 100%),
+	radial-gradient(circle at 80% 70%, #54acff17, transparent 81%),
+	radial-gradient(circle at 20% 80%, #af4dff20, transparent 44%),
+	radial-gradient(circle at 50% 30%, #4afff635, transparent 68%),
+	linear-gradient(rgb(255, 255, 255), white); /* Logo colors! */
+	color: rgb(28 144 255);
+
+	/* Be sure to check the accessability of your theme! */
+
+	/* Theme properties */
+	--roundness: 1.3; /* How round is this theme? Applied automatically to borders. Unitless */
+
+	/* Fonts! */
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	--code-font: RobotoMono, monospace;
+
+	/* Let's start left-to-right, top to bottom. */
+	/* First, the menu colors */
+	/* Unselected */
+	--menu-link-background: #000bff69;
+    --menu-link-foreground: white; 
+
+	/* Hover */
+	--menu-link-background-hover: #0010ffa8;
+    --menu-link-foreground-hover: white;
+
+	/* Current page */
+	--menu-link-background-current: #061def4d;
+    --menu-link-foreground-current: white;
+
+	/* Next, the dividers! */
+	/* This is the divider between the menu and the page */
+	--layout-divider-color: rgba(0, 0, 0, 0.158);
+	--layout-divider-width: 1px;
+
+	/* This is the color of hrs (including the title hr) */
+	--hr-color: rgba(0, 0, 0, 0.158);
+    
+	/* Onto the article! */
+	/* Links */
+	--article-link-color: #444eff;
+	--article-link-color-hover: #44ffba;
+	--article-link-color-active: #d5ff44;
+	
+	/* Code segments (mono inlines) */
+	--article-color-code-foreground: #00b7ff;
+    --article-color-code-background: #0000007a;
+
+	/* Full code blocks (formatted segments) */
+	--article-pre-color: white;
+	--article-pre-border: #ffffff38;
+	--article-pre-border-thickness: 1px;
+	--article-pre-background: #00000080;
+	/* Formatted code keywords! */
+	--hljs-keyword: #00aeff;
+	--hljs-string: #ffbb00;
+	--hljs-comment: #71ff90c7;
+	--hljs-title: #aca1e5;
+	--hljs-params: #8ae7d1;
+	--hljs-number: #39f548;
+	--hljs-built_in: #abe4ff;
+	--hljs-literal: #00ffee;
+
+	/* Onto the toolbar, at the bottom of the menu */
+	/* Color for the icons when not selected */
+	--toolbar-color: #000000d4;
+	--toolbar-hover-color: #3F51B5;
+
+	/* Highlight color for each section (used as background for it and for the icon) */
+	--toolbar-lang-color: #000000;
+	--toolbar-theme-color: #000000;
+	--toolbar-sync-color: #000000;
+	--toolbar-info-color: #000000;
+
+	/* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
+	--language-color: #3F51B5;
+	--theme-color: #3F51B5;
+	--sync-info-color: #3F51B5;
+	--info-color: #3F51B5;
+}
+menu .directory a, article :not(pre) > code, article pre, article table, .tool-bubble {
+	backdrop-filter: blur(100px);
+}
+article hr {
+	height: 1px;
+}
+.dialogue-arrow {
+	border: 1px solid transparent;
+	transition: background-color 0.3s, border 0.3s;
+}
+.dialogue-arrow.selected {
+	border: 1px solid white;
+}
+.dialogue-arrow.selected {
+	transform: translate(0, calc(-50% - var(--inset) - 1px)) rotate(45deg);
+}
+.tool-bubble {
+	border: 1px solid white;
+}
+.tool-bubble {
+	background: linear-gradient(0deg, white, transparent 70%) !important;
+}
+.toolbarIcon.lang.selected {
+	color: #3F51B5;
+}
+.toolbarIcon.theme.selected {
+	color: #3F51B5;
+}
+.toolbarIcon.info.selected {
+	color: #3F51B5;
+}
+article table {
+	background-color: #ffffff05;
+	padding: 10px;
+	border-radius: 10px;
+}
