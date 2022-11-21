@@ -131,3 +131,6 @@ body {
 .toolbarIcon.selected.info {
     color: #0A2BFF;
 }
+a {
+    color: #CCCCCC !important;
+}
