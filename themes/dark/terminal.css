@@ -21,7 +21,7 @@ body {
 	/* Let's start left-to-right, top to bottom. */
 	/* First, the menu colors */
 	/* Unselected */
-	--menu-link-background: #1d9100;
+	--menu-link-background: #0E4700;
     --menu-link-foreground: #2bff00; 
 
 	/* Hover */
