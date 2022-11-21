@@ -18,7 +18,7 @@ body {
 	--roundness: 1; /* How round is this theme? Applied automatically to borders. Unitless */
 
 	/* Fonts! */
-	font-family: '', sans-serif;
+	font-family: 'Times New Roman', Times, serif;
 	--code-font: RobotoMono, monospace;
 
 	/* Let's start left-to-right, top to bottom. */
