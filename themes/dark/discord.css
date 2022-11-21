@@ -4,7 +4,7 @@
    You must at the minimum provide ver (theme system version, currently 1) and author. You may also provide description.*/
 
 /* Import any fonts you need */
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 /* Define most theme properties here */
 body {
@@ -18,7 +18,7 @@ body {
 	--roundness: 1; /* How round is this theme? Applied automatically to borders. Unitless */
 
 	/* Fonts! */
-	font-family: PTSans, sans-serif;
+	font-family: 'Times New Roman', Times, serif;
 	--code-font: RobotoMono, monospace;
 
 	/* Let's start left-to-right, top to bottom. */
