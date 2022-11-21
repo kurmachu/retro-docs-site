@@ -67,7 +67,7 @@ body {
 
 	/* Onto the toolbar, at the bottom of the menu */
 	/* Color for the icons when not selected */
-	--toolbar-color: #17b700b4;
+	--toolbar-color: white;
 	--toolbar-hover-color: #69c371;
 
 	/* Highlight color for each section (used as background for it and for the icon) */
