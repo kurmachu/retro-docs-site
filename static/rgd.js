@@ -130,7 +130,8 @@ function updateThemeMeta(){
 				break;
 			case "optimized":
 				$('#theme-meta-accessibility-notice').css('display', '')
-				$('#theme-meta-accessibility-notice-text').html("<strong>This theme is optimized for accessibility</strong>")
+				$('#theme-meta-accessibility-notice-text').html(`<strong>This theme is optimized for accessibility</strong><br>
+				<small><span class="material-symbols-rounded" style="font-size: 1.3em;vertical-align: middle;margin-right: 3px;">verified</span>Optimized themes have passed stricter restrictions on contrast ratios.</small>`)
 				break;
 			default:
 				$('#theme-meta-accessibility-notice').css('display', 'none')
