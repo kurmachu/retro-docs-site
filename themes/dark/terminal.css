@@ -83,3 +83,7 @@ body {
 	--info-color: #033005;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
+
+i {
+	color:#84ff8a;
+}
