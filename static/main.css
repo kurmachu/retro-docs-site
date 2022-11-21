@@ -318,10 +318,10 @@ article pre > code {
 	align-items: center;
 	margin: 5px 0px;
 }
-.icon-label:first-child {
+.tool-bubble-contents > .icon-label:first-child {
 	margin-top: 0px;
 }
-.icon-label:last-child {
+.tool-bubble-contents > .icon-label:last-child {
 	margin-bottom: 0px;
 }
 .icon-label-text {

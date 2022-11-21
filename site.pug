@@ -75,10 +75,13 @@ html(lang="en")
 									+icon-label('warning')
 										small This theme has not been updated to the latest specifications, and may display incorrectly.
 								p#theme-meta-description
+								#theme-meta-accessibility-notice(style="display: none")
+									+icon-label('accessibility')
+										p#theme-meta-accessibility-notice-text
 								+icon-label('person')
 										p Contributed by 
 											strong#theme-meta-author
-							.theme-meta-none(style="display: none; margin-top: 5px;")
+							.theme-meta-none(style="display: none;")
 								+icon-label('warning')
 									p Legacy theme? No meta provided.
 							hr
