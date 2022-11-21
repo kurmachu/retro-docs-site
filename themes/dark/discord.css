@@ -9,8 +9,8 @@
 /* Define most theme properties here */
 body {
 	/* Basic properties applied to the body */
-	background-color: #36393F;
-	color: #D6D7D9;
+	background-color: #36393E;
+	color: #D6D7DA;
 
 	/* Be sure to check the accessability of your theme! */
 
@@ -24,15 +24,15 @@ body {
 	/* Let's start left-to-right, top to bottom. */
 	/* First, the menu colors */
 	/* Unselected */
-	--menu-link-background: #2F3136;
-    --menu-link-foreground: #445dff; 
+	--menu-link-background: #2F3135;
+    --menu-link-foreground: #445dfe; 
 
 	/* Hover */
-	--menu-link-background-hover: #445dff38;
-    --menu-link-foreground-hover: #445dff;
+	--menu-link-background-hover: #445dff37;
+    --menu-link-foreground-hover: #445dfe;
 
 	/* Current page */
-	--menu-link-background-current: #445dff;
+	--menu-link-background-current: #445dfe;
     --menu-link-foreground-current: #ffffff;
 
 	/* Next, the dividers! */
@@ -45,23 +45,23 @@ body {
     
 	/* Onto the article! */
 	/* Links */
-	--article-link-color: #445dff;
-	--article-link-color-hover: #445dffb9;
-	--article-link-color-active: #ffa14d;
+	--article-link-color: #445dfe;
+	--article-link-color-hover: #445dffba;
+	--article-link-color-active: #ffa14e;
 
 	/* Code segments (mono inlines) */
-	--article-color-code-foreground: #ad5100;
-    --article-color-code-background: #ffa14d21;
+	--article-color-code-foreground: #ad5101;
+    --article-color-code-background: #ffa14d22;
 
 	/* Full code blocks (formatted segments) */
 	--article-pre-color: white;
-	--article-pre-border: #44ff6d;
+	--article-pre-border: #44ff6e;
 	--article-pre-border-thickness: 2px;
-	--article-pre-background: #06150a;
+	--article-pre-background: #06150b;
 	/* Formatted code keywords! */
-	--hljs-keyword: #42a3ff;
-	--hljs-string: #ffff65;
-	--hljs-comment: #44ff6d9e;
+	--hljs-keyword: #42a3fe;
+	--hljs-string: #ffff66;
+	--hljs-comment: #44ff6d9f;
 	--hljs-title: white;
 	--hljs-params: white;
 	--hljs-number: white;
@@ -70,65 +70,65 @@ body {
 
 	/* Onto the toolbar, at the bottom of the menu */
 	/* Color for the icons when not selected */
-	--toolbar-color: #000000b4;
+	--toolbar-color: #000000b5;
 	--toolbar-hover-color: black;
 
 	/* Highlight color for each section (used as background for it and for the icon) */
-	--toolbar-lang-color: #ff624a;
-	--toolbar-theme-color: #16ce3e;
-	--toolbar-sync-color: #eccb0e;
-	--toolbar-info-color: #445dff;
+	--toolbar-lang-color: #ff624b;
+	--toolbar-theme-color: #16ce3f;
+	--toolbar-sync-color: #eccb0f;
+	--toolbar-info-color: #445dfe;
 
 	/* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
-	--language-color: #610D00;
-	--theme-color: #064C16;
-	--sync-info-color: #302903;
+	--language-color: #610D01;
+	--theme-color: #064C17;
+	--sync-info-color: #302904;
 	--info-color: white;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
 a {
-	color: #347BDD;
+	color: #347BDE;
 	text-decoration: none;
 }
 menu {
-	background-color: #2F3136;
+	background-color: #2F3137;
 }
 .toolbar .toolbarIcon {
     font-size: inherit;
-    color: #B9BBBE;
+    color: #B9BBBF;
     transition: color 0.3s, opacity 0.3s;
     user-select: none;
 }
 .toolbarIcon.selected.lang {
-    color: #B9BBBE;
+    color: #B9BBBF;
 }
 .toolbarIcon.selected.theme {
-    color: #B9BBBE;
+    color: #B9BBBF;
 }
 .toolbarIcon.selected.info {
-    color: #B9BBBE;
+    color: #B9BBBF;
 }
 .tool-bubble.theme {
-	background-color: #36393F;
-    color: #B9BBBE;
-    --pass-back: #B9BBBE;
+	background-color: #36393E;
+    color: #B9BBBF;
+    --pass-back: #B9BBBF;
 }
 .tool-bubble.lang {
-	background-color: #36393F;
-    color: #B9BBBE;
-    --pass-back: #B9BBBE;
+	background-color: #36393E;
+    color: #B9BBBF;
+    --pass-back: #B9BBBF;
 }
 .tool-bubble.info {
-	background-color: #36393F;
-    color: #B9BBBE;
-    --pass-back: #B9BBBE;
+	background-color: #36393E;
+    color: #B9BBBF;
+    --pass-back: #B9BBBF;
 }
 .dialogue-arrow.selected.lang {
-    background-color: #36393F;
+    background-color: #36393E;
 }
 .dialogue-arrow.selected.theme {
-    background-color: #36393F;
+    background-color: #36393E;
 }
 .dialogue-arrow.selected.info {
-    background-color: #36393F;
+    background-color: #36393E;
 }
