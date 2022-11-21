@@ -34,7 +34,7 @@ body {
 
 	/* Next, the dividers! */
 	/* This is the divider between the menu and the page */
-	--layout-divider-color: rgba(0, 0, 0, 0.158);
+	--layout-divider-color: rgb(43, 255, 0);
 	--layout-divider-width: 3px;
 
 	/* This is the color of hrs (including the title hr) */
@@ -56,7 +56,7 @@ body {
 	--article-pre-border-thickness: 2px;
 	--article-pre-background: #06150a;
 	/* Formatted code keywords! */
-	--hljs-keyword: #ef42ff;
+	--hljs-keyword: #f49ffc;
 	--hljs-string: #65e8ff;
 	--hljs-comment: #00ff37;
 	--hljs-title: white;
