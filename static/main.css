@@ -22,6 +22,7 @@
 }
 code {
 	font-family: var(--code-font);
+	font-size: var(--code-font-size);
 }
 
 body {
