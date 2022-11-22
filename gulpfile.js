@@ -121,7 +121,7 @@ async function RecursivelyBuildIndex(thisFolder, offset, inherit){
 }
 languageNames = {
 	en: "English",
-	ua: "українська",
+	ua: "Українська",
 	zh: "简体中文"
 }
 function translateCodeToName(code){
