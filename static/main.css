@@ -72,8 +72,6 @@ menu a.current {
 	display: block;
 }
 
-.directory {
-}
 .directory-name {
 	display: inline-flex;
 	align-items: center;
