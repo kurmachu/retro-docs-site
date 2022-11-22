@@ -1,0 +1,142 @@
+/* [THEME META] {"ver":1, "author":"stas96111", "description":"Theme similar to the multitool UI in the game.", "accessibility":"optimized"} */
+
+/* Import any fonts you need */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* Define most theme properties here */
+body {
+	/* Basic properties applied to the body */
+	background: 
+	radial-gradient(farthest-corner at 60% 50%, #231c643a, transparent 100%), 
+	linear-gradient(black, black);
+	color: white;
+
+	/* Be sure to check the accessability of your theme! */
+
+	/* Theme properties */
+	--roundness: 0; /* How round is this theme? Applied automatically to borders. Unitless */
+
+	/* Fonts! */
+	font-family: Quicksand, sans-serif;
+	--code-font: 'Press Start 2P', sans-serif;
+	--code-font-size: 12px;
+
+	/* Let's start left-to-right, top to bottom. */
+	/* First, the menu colors */
+	/* Unselected */
+	--menu-link-background: transparent;
+    --menu-link-foreground: #a9f272; 
+
+	/* Hover */
+	--menu-link-background-hover: transparent;
+    --menu-link-foreground-hover: #98b4c5;
+
+	/* Current page */
+	--menu-link-background-current: transparent;
+    --menu-link-foreground-current: #a9f272;
+
+	/* Next, the dividers! */
+	/* This is the divider between the menu and the page */
+	--layout-divider-color: rgba(0, 0, 0, 0.158);
+	--layout-divider-width: 3px;
+
+	/* This is the color of hrs (including the title hr) */
+	--hr-color: rgba(0, 0, 0, 0.158);
+    
+	/* Onto the article! */
+	/* Links */
+	--article-link-color: #a9f272;
+	--article-link-color-hover: #7fb457;
+	--article-link-color-active: #ffa14d;
+
+	/* Code segments (mono inlines) */
+	--article-color-code-foreground: yellow;
+    --article-color-code-background: #ffa14d21;
+
+	/* Full code blocks (formatted segments) */
+	--article-pre-color: white;
+	--article-pre-border: #a9f272;
+	--article-pre-border-thickness: 2px;
+	--article-pre-background: #0d1308;
+	/* Formatted code keywords! */
+	--hljs-keyword: #42a3ff;
+	--hljs-string: #ffff65;
+	--hljs-comment: #44ff6d9e;
+	--hljs-title: white;
+	--hljs-params: white;
+	--hljs-number: white;
+	--hljs-built_in: white;
+	--hljs-literal: white;
+
+	/* Onto the toolbar, at the bottom of the menu */
+	/* Color for the icons when not selected */
+	--toolbar-color: #a9f272;
+	--toolbar-hover-color: #98b4c5;
+
+	/* Highlight color for each section (used as background for it and for the icon) */
+	--toolbar-lang-color: #66B5FF;
+	--toolbar-theme-color: #FFA3DC;
+	--toolbar-sync-color: #e2c000;
+	--toolbar-info-color: #e2c000;
+
+	/* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
+	--language-color: #66B5FF;
+	--theme-color: #FFA3DC;
+	--sync-info-color: #e2c000;
+	--info-color: #e2c000;
+}
+/* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
+menu .directory a{
+  width: 150px;
+  position: relative;
+  background-image: linear-gradient(45deg, transparent 5%, #a9f272 5.3% 95%, transparent 95%);
+  z-index: 0;
+}
+menu .directory a::before {
+	z-index: -1;
+	content: '';
+	position: absolute;
+	left: 2px;
+	right: 2px;
+	top: 2px;
+	bottom: 2px;
+	background-image: linear-gradient(45deg, transparent 5%, #1a1922 5.3% 95%, transparent 95%);
+}
+menu .directory a:hover {
+	background-image: linear-gradient(45deg, transparent 5%, #98b4c5 5.3% 95%, transparent 95%);
+}
+menu .directory a:hover::before {
+	background-image: linear-gradient(45deg, transparent 5%, #1a1922 5.3% 95%, transparent 95%);
+}
+
+menu .directory a.current {
+	background-image: linear-gradient(45deg, transparent 5%, #98b4c5 5.3% 95%, transparent 95%);
+}
+menu .directory a.current::before {
+	background-image: linear-gradient(45deg, transparent 5%, #1A3A03 5.3% 95%, transparent 95%);
+}
+menu .directory a.current:hover {
+	color: #a9f272;
+}
+menu .directory a.current:hover::before {
+	color: #1a1922;
+}
+
+.tool-bubble.theme{
+	border: 2px solid #FF85CC;
+	background-color: #1a1922;
+	color: #FF85CC;
+}
+
+.tool-bubble.lang{
+	border: 2px solid #66B5FF;
+	background-color: #1a1922;
+	color: #66B5FF;
+}
+
+.tool-bubble.info{
+	border: 2px solid #e2c000;
+	background-color: #1a1922;
+	color: #e2c000;
+}
