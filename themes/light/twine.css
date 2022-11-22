@@ -1,11 +1,13 @@
+/* [THEME META] {"ver":1, "author":"Kurmachu", "description":"A revival of the second theme ever made, from back when themes were all in one file. Designed to look like what you might find in a textbook."} */
+
 /* Legacy theme, do not use as example. */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 body {
-	background-color: white;
+	background-color: #fbfdff;
 	--roundness: 0;
 	--layout-divider-width: 2px;
-	--layout-divider-color: #00000023;
-	--hr-color: #00000023;
+	--layout-divider-color: #0075da23;
+	--hr-color: #0075da23;
 
 	--menu-link-background: transparent;
 	--menu-link-border: #0074da56;
@@ -54,4 +56,21 @@ body {
 }
 .theme-twine .layout-divider {
 	width: 2px;
+}
+table {
+	border: 2px solid #dbebfa;
+	border-collapse: collapse;
+}
+th {
+	padding: 5px;
+	border: 2px solid #dbebfa;
+	background-color: #dbebfa;
+}
+td {
+	padding: 5px;
+	border: 2px solid #dbebfa;
+}
+
+tr:nth-child(even) {
+	background-color: #0074da09;
 }
