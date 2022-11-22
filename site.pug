@@ -26,6 +26,10 @@ html(lang="en")
 		script(src="/retro-docs-site/rgd.js", defer)
 
 		link#theme-zone(rel="stylesheet")
+		style#no-anim.
+			* {
+				transition: none !important;
+			}
 	body
 		script(src="/retro-docs-site/theme-restore.js") 
 		menu
