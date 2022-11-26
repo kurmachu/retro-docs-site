@@ -1,0 +1,85 @@
+/* [THEME META] {"ver":1, "author":"woooferz", "description": "Basic Color: Purple"} */
+
+/* Import any fonts you need */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap");
+
+/* Define most theme properties here */
+body {
+  /* Basic properties applied to the body */
+  background-color: rgb(164, 41, 213);
+  color: rgb(255, 255, 255);
+
+  /* Be sure to check the accessability of your theme! */
+
+  /* Theme properties */
+  --roundness: 1; /* How round is this theme? Applied automatically to borders. Unitless */
+
+  /* Fonts! */
+  font-family: Montserrat, sans-serif;
+  --code-font: RobotoMono, monospace;
+
+  /* Let's start left-to-right, top to bottom. */
+  /* First, the menu colors */
+  /* Unselected */
+  --menu-link-background: #ffffff;
+  --menu-link-foreground: #aa00ff;
+
+  /* Hover */
+  --menu-link-background-hover: #bb00ff38;
+  --menu-link-foreground-hover: #cb72f0;
+
+  /* Current page */
+  --menu-link-background-current: #ffffffea;
+  --menu-link-foreground-current: #7c0076;
+
+  /* Next, the dividers! */
+  /* This is the divider between the menu and the page */
+  --layout-divider-color: rgba(255, 255, 255, 0.158);
+  --layout-divider-width: 3px;
+
+  /* This is the color of hrs (including the title hr) */
+  --hr-color: rgba(255, 255, 255, 0.158);
+
+  /* Onto the article! */
+  /* Links */
+  --article-link-color: #ffffff;
+  --article-link-color-hover: #75fcef;
+  --article-link-color-active: #75fcef;
+
+  /* Code segments (mono inlines) */
+  --article-color-code-foreground: #8700ad;
+  --article-color-code-background: #ffffff;
+
+  /* Full code blocks (formatted segments) */
+  --article-pre-color: white;
+  --article-pre-border: #44ff6d;
+  --article-pre-border-thickness: 2px;
+  --article-pre-background: #06150a;
+  /* Formatted code keywords! */
+  --hljs-keyword: #ef42ff;
+  --hljs-string: #65e8ff;
+  --hljs-comment: #44ff6d9e;
+  --hljs-title: rgb(255, 132, 0);
+  --hljs-params: white;
+  --hljs-number: rgb(255, 116, 116);
+  --hljs-built_in: white;
+  --hljs-literal: rgb(59, 80, 233);
+
+  /* Onto the toolbar, at the bottom of the menu */
+  /* Color for the icons when not selected */
+  --toolbar-color: #ffffffb4;
+  --toolbar-hover-color: rgb(255, 255, 255);
+
+  /* Highlight color for each section (used as background for it and for the icon) */
+  --toolbar-lang-color: #ffffff;
+  --toolbar-theme-color: #ffffff;
+  --toolbar-sync-color: #ffffff;
+  --toolbar-info-color: #ffffff;
+
+  /* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
+  --language-color: #0a0330;
+  --theme-color: #0a0330;
+  --sync-info-color: #0a0330;
+  --info-color: #0a0330;
+}
+/* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
