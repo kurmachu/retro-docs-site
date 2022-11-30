@@ -1,3 +1,11 @@
+//- Included temporarily 
+mixin icon-label(icon)
+	div.icon-label
+		p.material-symbols-rounded= icon
+		p.icon-label-text
+			block
+
+
 mixin menuFolder(index, currentPath)
 
 	if index.meta.langs
@@ -13,6 +21,15 @@ mixin menuFolder(index, currentPath)
 				span= index.name
 		else
 			img.menuimage(src=`/retro-docs-site/${index.meta.language}/assets/retrologo.png`)
+			.menu-warn(style="")
+				+icon-label('dangerous')
+					p
+						strong Documentation is out of date
+				p A game update has changed how many components function. 
+				p
+					strong For the time being, please use the official documentation.
+				p
+					small Want to help out with bringing the docs back up to date? Check out the info panel.
 		.subcontents
 			- for (const file of index.files)
 				- let link = file.path.replace(/\.[^/.]+$/, "")+".html"

@@ -343,3 +343,12 @@ article pre > code {
 	color: black;
 	text-transform: capitalize;
 }
+
+.menu-warn {
+	background-color: var(--toolbar-lang-color);
+	color: var(--language-color);
+	--pass-back: var(--language-color);
+	padding: 7px 10px;
+	border-radius: calc(5px * var(--roundness));
+	max-width: 278px;
+}
