@@ -131,14 +131,19 @@ article h1 {
 	font-weight: 400;
 	margin-bottom: 0px;
 }
+article h2 {
+	margin-top: 1em;
+    margin-bottom: -0.2em;
+}
+article h3 {
+	margin-bottom: -0.5em;
+    font-weight: 500;
+}
 article hr {
 	border: none;
 	height: 2px;
 	border-radius: calc(10px * var(--roundness));
 	background-color: var(--hr-color);
-}
-article h3 {
-	font-weight: 500;
 }
 article code {
 	color: var(--article-color-code-foreground);
