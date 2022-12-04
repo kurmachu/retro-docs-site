@@ -151,3 +151,7 @@ if($('.theme-selector').val()==null){
 	$('.theme-selector').val("/default/arithm.css")
 	document.getElementById("theme-zone").href = `/retro-docs-site/themes${localStorage.getItem("theme")}`
 }
+
+window.requestAnimationFrame(()=>{
+	$("#no-anim").remove()
+})
