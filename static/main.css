@@ -176,6 +176,44 @@ article pre > code {
     padding: 3px;
     border-radius: calc(6px * var(--roundness));
 }
+article table {
+	margin: 5px 0px;
+	border-radius: calc(10px * var(--roundness));
+	border: 1px solid var(--table-borders-color);
+	border-spacing: 0px;
+	overflow: hidden;
+}
+article th {
+	padding: 7px;
+	background-color: var(--table-header-color);
+}
+article td {
+	padding: 7px;
+	background-color: var(--table-body-color);
+}
+article tr:nth-child(2n) td {
+	background-color: var(--table-body-color-alternate);
+}
+article td:not(:last-child), article th:not(:last-child) {
+	border-right: 1px solid var(--table-borders-color);
+}
+article tr:not(:last-child) td, article tr th {
+	border-bottom: 1px solid var(--table-borders-color);
+}
+article blockquote {
+	position: relative;
+	color: var(--blockquote-text-color);
+}
+article blockquote::after {
+	content: '';
+	top: 0;
+	left: -1.4em;
+	height: 100%;
+	width: 5px;
+	position: absolute;
+	background-color: var(--blockquote-line-color);
+	border-radius: calc(2.5px * var(--roundness));
+}
 
 
 .hljs-keyword {
@@ -356,4 +394,64 @@ article pre > code {
 	padding: 7px 10px;
 	border-radius: calc(5px * var(--roundness));
 	max-width: 278px;
+}
+@media (min-width: 620px) {
+	.only-mobile {
+		display: none !important;
+	}
+}
+body .mobile-menu-button {
+	position: absolute;
+	background: var(--mobile-menu-button-background);
+	color: var(--mobile-menu-button-color);
+	top: 0;
+	right: 0;
+	margin: 0px;
+	padding: 0.4em;
+	padding-top: 1em;
+	margin-right: 1em;
+	border-bottom-left-radius: calc(var(--roundness) * 10px);
+	border-bottom-right-radius: calc(var(--roundness) * 10px);
+	display: none;
+	transition: top 0.3s;
+	user-select: none;
+}
+body menu.show-mobile ~ .mobile-menu-button {
+	top: 100%;
+}
+@media (max-width: 619px) {
+	body {
+		max-height: 100%;
+		overflow: hidden;
+	}
+	body .mobile-menu-button {
+		display: block;
+	}
+	menu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		background: var(--mobile-menu-background);
+		overflow-x: scroll;
+		transition: height 0.3s, padding 0.3s;
+		/* padding-left: unset; */
+	}
+	menu:not(.show-mobile) {
+		height: 0%;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.only-mobile {
+		display: unset;
+	}
+
+	.layout-divider {
+		display: none;
+	}
+	article {
+		padding-left: 10px;
+	}
 }

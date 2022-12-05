@@ -123,13 +123,15 @@ html(lang="en")
 					.tool-dialogue-arrow-area
 						.dialogue-arrow.lang
 						.dialogue-arrow.theme
-						//- .dialogue-arrow.sync
 						.dialogue-arrow.info
+						.dialogue-arrow.dismiss.only-mobile
 				.toolbar
 					p.toolbarIcon.material-symbols-rounded.lang(data-is="lang", data-open="c_lang") Language
 					p.toolbarIcon.material-symbols-rounded.theme(data-is="theme", data-open="c_theme") Palette
 					//- p.toolbarIcon.material-symbols-rounded.sync(data-is="sync", data-open="c_sync") Sync
 					p.toolbarIcon.material-symbols-rounded.info(data-is="info", data-open="c_info") Info
+					p.toolbarIcon.material-symbols-rounded.sync.only-mobile(data-is="dismiss") Expand_less
 		.layout-divider
 		article
 			!= markdown
+		p.mobile-menu-button.material-symbols-rounded menu

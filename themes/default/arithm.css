@@ -1,7 +1,7 @@
-/* [THEME META] {"ver":1, "author":"SYSTEM", "description":"The default theme! Welcoming, readable, and logo-centric."} */
-/* Theme meta needs to be the first line in your theme, if you want to provide it.
+/* [THEME META] {"ver":2, "author":"SYSTEM", "description":"The default theme! Welcoming, readable, and logo-centric."} */
+/* Theme meta needs to be the first line in your theme.
    It must be valid JSON, must remain one line, and you must have the proper spacing before and after the JSON as shown above. 
-   You must at the minimum provide ver (theme system version, currently 1) and author. You may also provide description.
+   You must at the minimum provide ver (theme system version, currently 2) and author. You may also provide description.
    If you'd like to opt-out of accessibility checks, add "accessibility":"ignore". If your theme is high-contrast or otherwise meant for accessibility, add "accessibility":"optimized"*/
 
 /* Import any fonts you need */
@@ -69,6 +69,16 @@ body {
 	--hljs-built_in: white;
 	--hljs-literal: white;
 
+	/* Tables! Rare, but still there. */
+	--table-borders-color: #d7d7d7;
+	--table-header-color: #0000000d;
+	--table-body-color: white;
+	--table-body-color-alternate: #d7d7d717;
+
+	/* Did you know markdown has block quotes? Yeah apparently it does. */
+	--blockquote-line-color: #d7d7d7;
+	--blockquote-text-color: #000000cc;
+
 	/* Onto the toolbar, at the bottom of the menu */
 	/* Color for the icons when not selected */
 	--toolbar-color: #000000b4;
@@ -85,5 +95,13 @@ body {
 	--theme-color: #064C16;
 	--sync-info-color: #302903;
 	--info-color: white;
+
+	/* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: white;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: black;
+	--mobile-menu-button-background: #ffffff9b;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
