@@ -81,5 +81,13 @@ body {
 	--theme-color: #0a0330;
 	--sync-info-color: #0a0330;
 	--info-color: #0a0330;
+	
+        /* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: #d6ebff;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: #ffffff;
+	--mobile-menu-button-background: #47abc9;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
