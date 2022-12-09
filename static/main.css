@@ -437,6 +437,7 @@ body menu.show-mobile ~ .mobile-menu-button {
 		background: var(--mobile-menu-background);
 		overflow-x: scroll;
 		transition: height 0.3s, padding 0.3s;
+		z-index: 10;
 		/* padding-left: unset; */
 	}
 	menu:not(.show-mobile) {
