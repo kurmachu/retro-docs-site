@@ -1,4 +1,4 @@
-/* [THEME META] {"ver":1, "author":"Kurmachu", "description":"A revival of the second theme ever made, from back when themes were all in one file. Designed to look like what you might find in a textbook."} */
+/* [THEME META] {"ver":2, "author":"Kurmachu", "description":"A revival of the second theme ever made, from back when themes were all in one file. Designed to look like what you might find in a textbook."} */
 
 /* Legacy theme, do not use as example. */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
@@ -50,6 +50,23 @@ body {
 	--article-link-color: #0075da;
 	--article-link-color-hover: #005aa8;
 	--article-link-color-active: #0082f4;
+
+	/* Did you know markdown has block quotes? Yeah apparently it does. */
+	--blockquote-line-color: #dbebfa;
+	--blockquote-text-color: #2975BC;
+
+	/* Onto the toolbar, at the bottom of the menu */
+	/* Color for the icons when not selected */
+	--toolbar-color: #000000b4;
+	--toolbar-hover-color: black;
+
+	/* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: #fbfdff;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: black;
+	--mobile-menu-button-background: #dbebfaa2;
 }
 .theme-twine menu .directory a {
 	border: 1px solid var(--menu-link-border);
@@ -58,19 +75,19 @@ body {
 	width: 2px;
 }
 table {
-	border: 2px solid #dbebfa;
-	border-collapse: collapse;
+	border: 2px solid #dbebfa !important;
+	border-collapse: collapse !important;
 }
 th {
-	padding: 5px;
-	border: 2px solid #dbebfa;
-	background-color: #dbebfa;
+	padding: 5px !important;
+	border: 2px solid #dbebfa !important;
+	background-color: #dbebfa !important;
 }
 td {
-	padding: 5px;
-	border: 2px solid #dbebfa;
+	padding: 5px !important;
+	border: 2px solid #dbebfa !important;
 }
 
 tr:nth-child(even) {
-	background-color: #0074da09;
+	background-color: #0074da09 !important;
 }
