@@ -21,8 +21,8 @@ body {
 	/* Tables! Rare, but still there. */
 	--table-borders-color: #00ff00;
 	--table-header-color: #09ff000d;
-	--table-body-color: rgb(72, 255, 0);
-	--table-body-color-alternate: #0026ff17;
+	--table-body-color: rgb(0, 0, 0);
+	--table-body-color-alternate: rgb(0, 0, 0);
 
 	/* Did you know markdown has block quotes? Yeah apparently it does. */
 	--blockquote-line-color: #d7d7d7;

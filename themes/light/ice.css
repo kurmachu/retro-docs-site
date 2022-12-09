@@ -24,11 +24,12 @@ body {
 	/* Be sure to check the accessability of your theme! */
 
 	/* Tables! Rare, but still there. */
-	--table-borders-color: #d7d7d7;
-	--table-header-color: #0000000d;
-	--table-body-color: rgb(0, 0, 0);
-	--table-body-color-alternate: #d7d7d717;
-	
+	--table-borders-color: #ffffff;
+	--table-header-color: #ffffff00;
+	--table-body-color: rgb(0 0 0 / 0%);
+	--table-body-color-alternate: #00000000;
+
+    --blockquote-line-color: #0062ff;
 
 	/* Theme properties */
 	--roundness: 1.5; /* How round is this theme? Applied automatically to borders. Unitless */
