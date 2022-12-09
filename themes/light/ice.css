@@ -94,6 +94,14 @@ body {
 	--theme-color: #3F51B5;
 	--sync-info-color: #3F51B5;
 	--info-color: #3F51B5;
+	
+        /* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: #d6ebff;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: black;
+	--mobile-menu-button-background: #dbebfaa2;
 }
 menu .directory a, article :not(pre) > code, article pre, article table, .tool-bubble {
 	backdrop-filter: blur(100px);
