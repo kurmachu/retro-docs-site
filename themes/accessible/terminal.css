@@ -18,6 +18,16 @@ body {
 	font-family: 'Roboto Mono', monospace;
 	--code-font: RobotoMono, monospace;
 
+	/* Tables! Rare, but still there. */
+	--table-borders-color: #00ff00;
+	--table-header-color: #09ff000d;
+	--table-body-color: rgb(72, 255, 0);
+	--table-body-color-alternate: #0026ff17;
+
+	/* Did you know markdown has block quotes? Yeah apparently it does. */
+	--blockquote-line-color: #d7d7d7;
+	--blockquote-text-color: #51ff00cc;
+
 	/* Let's start left-to-right, top to bottom. */
 	/* First, the menu colors */
 	/* Unselected */
