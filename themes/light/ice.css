@@ -23,6 +23,13 @@ body {
 
 	/* Be sure to check the accessability of your theme! */
 
+	/* Tables! Rare, but still there. */
+	--table-borders-color: #d7d7d7;
+	--table-header-color: #0000000d;
+	--table-body-color: rgb(0, 0, 0);
+	--table-body-color-alternate: #d7d7d717;
+	
+
 	/* Theme properties */
 	--roundness: 1.5; /* How round is this theme? Applied automatically to borders. Unitless */
 
