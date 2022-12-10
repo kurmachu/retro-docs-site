@@ -32,15 +32,15 @@ body {
 	/* First, the menu colors */
 	/* Unselected */
 	--menu-link-background: #ffffff;
-    --menu-link-foreground: #0022ff; 
+        --menu-link-foreground: #0022ff; 
 
 	/* Hover */
 	--menu-link-background-hover: #0022ff38;
-    --menu-link-foreground-hover: #9da9f5;
+        --menu-link-foreground-hover: #9da9f5;
 
 	/* Current page */
 	--menu-link-background-current: #ffffffea;
-    --menu-link-foreground-current: #13007c;
+        --menu-link-foreground-current: #13007c;
 
 	/* Next, the dividers! */
 	/* This is the divider between the menu and the page */
