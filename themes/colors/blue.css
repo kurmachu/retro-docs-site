@@ -119,16 +119,16 @@ article hr {
 	border: 1px solid white;
 }
 .tool-bubble {
-	background: linear-gradient(0deg, white, transparent 70%) !important;
+	background: #ffffff !important;
 }
 .toolbarIcon.lang.selected {
-	color: #3F51B5;
+	color: #ffffff;
 }
 .toolbarIcon.theme.selected {
-	color: #3F51B5;
+	color: #ffffff;
 }
 .toolbarIcon.info.selected {
-	color: #3F51B5;
+	color: #ffffff;
 }
 article table {
 	background-color: #ffffff05;
