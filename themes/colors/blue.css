@@ -21,8 +21,8 @@ body {
 	/* Tables! Rare, but still there. */
    --table-borders-color: #d7d7d7;
 	--table-header-color: #0000000d;
-	--table-body-color: #2196F3;
-	--table-body-color-alternate: #d7d7d717;
+	--table-body-color: #fb282800;
+	--table-body-color-alternate: #d7d7d700;
 
 	/* Did you know markdown has block quotes? Yeah apparently it does. */
 	--blockquote-line-color: #d7d7d7;
@@ -94,10 +94,57 @@ body {
 	
         /* We've gotta do mobile now, because apparently people want to read docs on their phone. */
 	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
-	--mobile-menu-background: #d6ebff;
+	--mobile-menu-background: rgb(62, 111, 218);
 
 	/* On mobile there's a menu button, so we should give it a color and background.*/
 	--mobile-menu-button-color: #ffffff;
 	--mobile-menu-button-background: #47abc9;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
+
+article hr {
+	height: 1px;
+}
+.dialogue-arrow {
+	border: 1px solid #ff000000;
+	transition: background-color 0.3s, border 0.3s;
+}
+.dialogue-arrow.selected {
+	border: 1px solid white;
+}
+.dialogue-arrow.selected {
+	transform: translate(0, calc(-50% - var(--inset) - 1px)) rotate(45deg);
+}
+.tool-bubble {
+	border: 1px solid white;
+}
+.tool-bubble {
+	background: linear-gradient(0deg, white, transparent 70%) !important;
+}
+.toolbarIcon.lang.selected {
+	color: #3F51B5;
+}
+.toolbarIcon.theme.selected {
+	color: #3F51B5;
+}
+.toolbarIcon.info.selected {
+	color: #3F51B5;
+}
+article table {
+	background-color: #ffffff05;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.dialogue-arrow.selected.lang {
+	background-color: white;
+}
+.dialogue-arrow.selected.theme {
+	background-color: white;
+}
+.dialogue-arrow.selected.sync {
+	background-color: white;
+}
+.dialogue-arrow.selected.info {
+	background-color: white;
+}
