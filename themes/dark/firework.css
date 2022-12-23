@@ -1,4 +1,4 @@
-/* [THEME META] {"ver":1, "author":"Kurmachu", "description":"Calm gradients and blurry backgrounds."} */
+/* [THEME META] {"ver":2, "author":"Kurmachu", "description":"Calm gradients and blurry backgrounds."} */
 
 /* Import any fonts you need */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
@@ -77,6 +77,16 @@ body {
 	--hljs-built_in: #abe4ff;
 	--hljs-literal: #00ffee;
 
+	/* Tables! Rare, but still there. */
+	--table-borders-color: #ffffff1b;
+	--table-header-color: #00000000;
+	--table-body-color: #00000027;
+	--table-body-color-alternate: #0000002c;
+
+	/* Did you know markdown has block quotes? Yeah apparently it does. */
+	--blockquote-line-color: #ffffff3b;
+	--blockquote-text-color: #ffffffcc;
+
 	/* Onto the toolbar, at the bottom of the menu */
 	/* Color for the icons when not selected */
 	--toolbar-color: #ffffffb4;
@@ -93,8 +103,16 @@ body {
 	--theme-color: white;
 	--sync-info-color: white;
 	--info-color: white;
+
+	/* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: #0000005d;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: white;
+	--mobile-menu-button-background: #00000017;
 }
-menu .directory a, article :not(pre) > code, article pre, article table, .tool-bubble {
+menu .directory a, article :not(pre) > code, article pre, article table, .tool-bubble, article blockquote::after {
 	backdrop-filter: blur(100px);
 }
 article hr {
@@ -127,6 +145,15 @@ article hr {
 }
 article table {
 	background-color: #ffffff05;
-	padding: 10px;
-	border-radius: 10px;
+	/* padding: 10px; */
+	/* border-radius: 10px; */
+}
+@media (max-width: 619px) { 
+	menu {
+		backdrop-filter: blur(50px);
+	}
+}
+.mobile-menu-button.material-symbols-rounded {
+	/* opacity: 0.9; */
+	backdrop-filter: blur(10px);
 }

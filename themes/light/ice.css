@@ -1,4 +1,4 @@
-/* [THEME META] {"ver":1, "author":"donut28", "description":"Blue but with Discord light mode mixed in. Will make you blind.", "accessibility":"ignore"} */
+/* [THEME META] {"ver":2, "author":"donut28", "description":"Blue but with Discord light mode mixed in. Will make you blind.", "accessibility":"ignore"} */
 
 /* Import any fonts you need */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet');
@@ -22,6 +22,14 @@ body {
 	color: rgb(28 144 255);
 
 	/* Be sure to check the accessability of your theme! */
+
+	/* Tables! Rare, but still there. */
+	--table-borders-color: #ffffff;
+	--table-header-color: #ffffff00;
+	--table-body-color: rgb(0 0 0 / 0%);
+	--table-body-color-alternate: #00000000;
+
+    --blockquote-line-color: #0062ff;
 
 	/* Theme properties */
 	--roundness: 1.5; /* How round is this theme? Applied automatically to borders. Unitless */
@@ -94,6 +102,14 @@ body {
 	--theme-color: #3F51B5;
 	--sync-info-color: #3F51B5;
 	--info-color: #3F51B5;
+	
+        /* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: #d6ebff;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: black;
+	--mobile-menu-button-background: #dbebfaa2;
 }
 menu .directory a, article :not(pre) > code, article pre, article table, .tool-bubble {
 	backdrop-filter: blur(100px);

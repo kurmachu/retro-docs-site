@@ -1,3 +1,5 @@
+const CURRENT_THEME_VER = 2
+
 $(":not(menu) > .directory .subcontents").css('height','0px').css('display', 'none')
 $(":not(menu) > .directory").addClass("closed")
 $('menu').on('click','.directory-name', function(){
@@ -64,6 +66,10 @@ $('.toolbarIcon').on('click', function(){
 	if(toolbar_timeout>=0){
 		window.clearTimeout(toolbar_timeout)
 	}
+	if($(this).data('is')=="dismiss"){
+		$('menu').removeClass('show-mobile')
+		return
+	}
 	if($(this).hasClass('selected')){
 		$(this).removeClass('selected')
 		$('.dialogue-arrow').removeClass("selected")
@@ -94,6 +100,9 @@ new ResizeObserver(entries => {
 addEventListener('load', ()=>{
 	$('.tools').width(0).width($('menu').width())
 })
+addEventListener('resize', ()=>{
+	$('.tools').width(0).width($('menu').width())
+})
 
 
 $('.theme-selector').on('change', function(){
@@ -117,7 +126,7 @@ function updateThemeMeta(){
 		$('.theme-meta-none').css('display', 'none')
 		$('.theme-meta-zone').css('display', '')
 
-		$('#theme-meta-ver-warning').css('display', meta.ver>=1? 'none':'')
+		$('#theme-meta-ver-warning').css('display', meta.ver>=CURRENT_THEME_VER? 'none':'')
 		$('#theme-meta-author').text(meta.author)
 		$('#theme-meta-description').text(meta.description? meta.description : "")
 
@@ -154,4 +163,9 @@ if($('.theme-selector').val()==null){
 
 window.requestAnimationFrame(()=>{
 	$("#no-anim").remove()
+})
+
+
+$('.mobile-menu-button').on('click',()=>{
+	$('menu').addClass('show-mobile')
 })

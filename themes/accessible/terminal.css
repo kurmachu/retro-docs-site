@@ -1,4 +1,4 @@
-/* [THEME META] {"ver":1, "author":"donut28", "description":"Feel like a hacker with this customised dark theme.",  "accessibility":"optimized"} */
+/* [THEME META] {"ver":2, "author":"donut28", "description":"Feel like a hacker with this customised dark theme.",  "accessibility":"optimized"} */
 
 /* Import any fonts you need */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
@@ -17,6 +17,16 @@ body {
 	/* Fonts! */
 	font-family: 'Roboto Mono', monospace;
 	--code-font: RobotoMono, monospace;
+
+	/* Tables! Rare, but still there. */
+	--table-borders-color: #00ff00;
+	--table-header-color: #09ff000d;
+	--table-body-color: rgb(0, 0, 0);
+	--table-body-color-alternate: rgb(0, 0, 0);
+
+	/* Did you know markdown has block quotes? Yeah apparently it does. */
+	--blockquote-line-color: #d7d7d7;
+	--blockquote-text-color: #51ff00cc;
 
 	/* Let's start left-to-right, top to bottom. */
 	/* First, the menu colors */
@@ -81,6 +91,15 @@ body {
 	--theme-color: #033005;
 	--sync-info-color: #033005;
 	--info-color: #033005;
+	
+        /* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: #000000;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: #067200;
+	--mobile-menu-button-background: #ffffff;
+	
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
 
