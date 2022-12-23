@@ -89,7 +89,7 @@ body {
 	--mobile-menu-background: white;
 
 	/* On mobile there's a menu button, so we should give it a color and background.*/
-	--mobile-menu-button-color: black;
+	--mobile-menu-button-color: transparent;
 	--mobile-menu-button-background: #ffffff9b;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
