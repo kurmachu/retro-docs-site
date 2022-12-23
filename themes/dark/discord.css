@@ -1,4 +1,4 @@
-/* [THEME META] {"ver":1, "author":"Crate", "description":"A theme using discords colors!", "accessibility":"ignore"} */
+/* [THEME META] {"ver":2, "author":"Crate", "description":"A theme using discords colors!", "accessibility":"ignore"} */
 /* Theme meta needs to be the first line in your theme, if you want to provide it.
    It must be valid JSON, must remain one line, and you must have the proper spacing before and after the JSON as shown above. 
    You must at the minimum provide ver (theme system version, currently 1) and author. You may also provide description.*/
@@ -84,6 +84,13 @@ body {
 	--theme-color: #064C17;
 	--sync-info-color: #302904;
 	--info-color: white;
+		/* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: white;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: black;
+	--mobile-menu-button-background: #ffffff9b;
 }
 /* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
 a {
