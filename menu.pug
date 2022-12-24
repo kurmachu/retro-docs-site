@@ -13,7 +13,7 @@ mixin menuFolder(index, currentPath)
 				span= index.name
 		else
 			img.menuimage(src=`/retro-docs-site/${index.meta.language}/assets/retrologo.png`)
-			.menu-warn(style="")
+			//- .menu-warn(style="")
 				+icon-label('dangerous')
 					p
 						strong Documentation is out of date
