@@ -119,7 +119,7 @@ article {
 article img {
 	border-radius: calc(5px * var(--roundness));
 	/* margin: 10px; */
-	max-width: calc(100% - 5px);
+	max-width: 100%;
 	display: block;
 }
 article img[align="right"] {
@@ -132,12 +132,15 @@ article h1 {
 	margin-bottom: 0px;
 }
 article h2 {
-	margin-top: 1em;
+	margin-top: 1.1em;
     margin-bottom: -0.2em;
 }
 article h3 {
 	margin-bottom: -0.5em;
     font-weight: 500;
+}
+article h4 {
+	margin-bottom: -1em;
 }
 article hr {
 	border: none;
