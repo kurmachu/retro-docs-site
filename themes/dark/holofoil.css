@@ -1,0 +1,409 @@
+/* [THEME META] {"ver":2, "author":"Kurmachu", "description":"CHROME ONLY, FIREFOX WILL CRY. A shiny theme with slightly subtle shimmers. For added effect, put on the S.S. Drake background music from Pikmin 3.", "accessibility":"ignore"} */
+/* Theme meta needs to be the first line in your theme.
+   It must be valid JSON, must remain one line, and you must have the proper spacing before and after the JSON as shown above. 
+   You must at the minimum provide ver (theme system version, currently 2) and author. You may also provide description.
+   If you'd like to opt-out of accessibility checks, add "accessibility":"ignore". If your theme is high-contrast or otherwise meant for accessibility, add "accessibility":"optimized"*/
+
+/* Import any fonts you need */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Lato:wght@400;900&display=swap');
+
+/* Define most theme properties here */
+body {
+	/* Basic properties applied to the body */
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+
+	/* Be sure to check the accessability of your theme! */
+
+	/* Theme properties */
+	--roundness: 2; /* How round is this theme? Applied automatically to borders. Unitless */
+
+	/* Fonts! */
+	font-family: Lato, sans-serif;
+	--code-font: 'DM Mono', monospace;
+
+	/* Let's start left-to-right, top to bottom. */
+	/* First, the menu colors */
+	/* Unselected */
+	--menu-link-background: transparent;
+    /* --menu-link-foreground: #ffffff;  */
+
+	/* Hover */
+	/* --menu-link-background-hover: #ffffff38; */
+    /* --menu-link-foreground-hover: #0022ff; */
+
+	/* Current page */
+	/* --menu-link-background-current: #445dff; */
+    /* --menu-link-foreground-current: #ffffff; */
+
+	/* Next, the dividers! */
+	/* This is the divider between the menu and the page */
+	--layout-divider-color: rgba(255, 255, 255, 0.041);
+	--layout-divider-width: 2px;
+
+	/* This is the color of hrs (including the title hr) */
+	--hr-color: #ffffff;
+    
+	/* Onto the article! */
+	/* Links */
+	--article-link-color: #29cedb;
+	--article-link-color-hover: #29cedb;
+	--article-link-color-active: #ac34fd;
+
+	/* Code segments (mono inlines) */
+	/* --article-color-code-foreground: #ad5100; */
+    /* --article-color-code-background: #ffa14d21; */
+
+	/* Full code blocks (formatted segments) */
+	--article-pre-color: white;
+	/* --article-pre-border: #44ff6d; */
+	/* --article-pre-border-thickness: 2px; */
+	/* --article-pre-background: #06150a; */
+	/* Formatted code keywords! */
+	--hljs-keyword: #00b2fc;
+	--hljs-string: #ffaf6e;
+	--hljs-comment: #01d2a5;
+	--hljs-title: #ff5400;
+	--hljs-params: white;
+	--hljs-number: #74efff;
+	--hljs-built_in: #ab48e5;
+	--hljs-literal: #9927dc;
+
+	/* Tables! Rare, but still there. */
+	--table-borders-color: #ffffff1d;
+	--table-header-color: transparent;
+	--table-body-color: transparent;
+	--table-body-color-alternate: transparent;
+
+	/* Did you know markdown has block quotes? Yeah apparently it does. */
+	--blockquote-line-color: #ffffff57;
+	--blockquote-text-color: #ffffffcf;
+
+	/* Onto the toolbar, at the bottom of the menu */
+	/* Color for the icons when not selected */
+	--toolbar-color: #ffffffb4;
+	--toolbar-hover-color: black;
+
+	/* Highlight color for each section (used as background for it and for the icon) */
+	--toolbar-lang-color: #ff624a;
+	--toolbar-theme-color: #16ce3e;
+	--toolbar-sync-color: #eccb0e;
+	--toolbar-info-color: #445dff;
+
+	/* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
+	--language-color: white;
+	--theme-color: white;
+	--sync-info-color: white;
+	--info-color: white;
+
+	/* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: black;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: white;
+	--mobile-menu-button-background: radial-gradient(#000000ad, transparent);
+}
+/* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
+
+article h1 {
+	--radiant-color-1: #00ffb0;
+    --radiant-color-2: #00d9ff;
+    --radiant-size: 624px;
+    --radiant-speed: 15s;
+
+	font-weight: 900;
+	font-size: 3em;
+
+	filter: drop-shadow(0px 0px 2px #00eed5);
+}
+article hr {
+	box-shadow: 0px 0px 4px white;
+}
+article code {
+	padding: 1px 12px;
+	box-shadow: inset 0px 0px 10px #ffffff59, inset 0px 6px 8px -7px #00eed596;
+}
+article pre code {
+	box-shadow: none;
+}
+article pre {
+	box-shadow: inset 0px 0px 10px #ffffff59, inset 0px 6px 8px -7px #00eed596;
+	background-color: #ffffff07;
+	padding: 30px;
+}
+
+article table {
+	box-shadow: inset 0px 0px 10px #ffffff59, inset 0px 6px 8px -7px #00eed596;
+	background-color: #ffffff07;
+	border: none;
+}
+
+
+.hljs-comment, .hljs-title, .hljs-number, .hljs-literal, .hljs-built_in, .hljs-keyword, article a, article h1, .toolbar .toolbarIcon {
+	background: linear-gradient(90deg, var(--radiant-color-1), var(--radiant-color-2), var(--radiant-color-1));
+	background-size: var(--radiant-size);
+	background-position-x: 0px;
+	background-attachment: fixed;
+	display: inline-block;
+	background-clip: text;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+
+	animation: infinite gradient-animation var(--radiant-speed) linear;
+	/* opacity: 0.7; */
+}
+@keyframes gradient-animation {
+	from {
+		background-position-x: 0px;
+	}
+	to {
+		background-position-x: var(--radiant-size);
+	}
+}
+@property --radiant-color-2 {
+	syntax: "<color>";
+	inherits: true;
+	initial-value: #ffffff;
+}
+@property --radiant-color-1 {
+	syntax: "<color>";
+	inherits: true;
+	initial-value: #ffffff;
+}
+@property --radiant-size {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 333px;
+}
+@property --radiant-speed {
+	syntax: "<time>";
+	inherits: true;
+	initial-value: 4s;
+}
+
+.hljs-comment {
+	--radiant-color-1: #00c8ffb7;
+	--radiant-color-2: #00ffbfd8;
+	--radiant-size: 333px;
+	--radiant-speed: 4s;
+}
+.hljs-title {
+	--radiant-color-1: #ff8700;
+    --radiant-color-2: #ff5200;
+    --radiant-size: 150px;
+    --radiant-speed: 10s;
+}
+.hljs-literal {
+    --radiant-color-1: #6e3ee4;
+    --radiant-color-2: #e700d0;
+    --radiant-size: 135px;
+    --radiant-speed: 8s;
+}
+.hljs-keyword {
+	--radiant-color-1: #00fff7;
+    --radiant-color-2: #0077ff;
+    --radiant-size: 500px;
+    --radiant-speed: 15s;
+}
+.hljs-built_in {
+    --radiant-color-1: #9d30dc;
+    --radiant-color-2: #d996ff;
+    --radiant-size: 100px;
+    --radiant-speed: 15s;
+}
+.hljs-number {
+	--radiant-color-1: #cef9ff;
+    --radiant-color-2: #6eefff;
+    --radiant-size: 100px;
+    --radiant-speed: 10s;
+}
+
+article a {
+	text-decoration-color: #ffffff2b;
+
+	--radiant-color-1: #00ffd0;
+    --radiant-color-2: #b32bff;
+    --radiant-size: 582px;
+    --radiant-speed: 12s;
+
+	transition: text-decoration-color 0.3s;
+}
+article a:hover {
+	text-decoration-color: #ffffff45;
+	/* --radiant-speed: 5s; */
+}
+article a:active {
+	text-decoration-color: #ffffff85;
+}
+
+
+article tr {
+	background: linear-gradient(90deg, var(--radiant-color-1), var(--radiant-color-2), var(--radiant-color-1));
+	background-size: var(--radiant-size);
+	background-position-x: 0px;
+	background-attachment: fixed;
+	/* display: inline-block; */
+
+	animation: infinite gradient-animation var(--radiant-speed) linear;
+	/* opacity: 0.7; */
+}
+article thead tr {
+	--radiant-color-1: #00eed512;
+    --radiant-color-2: #00eed547;
+    --radiant-size: 971px;
+    --radiant-speed: 20s;
+}
+article tbody tr {
+	--radiant-color-1: #ffffff00;
+    --radiant-color-2: #ffffff14;
+    --radiant-size: 971px;
+    --radiant-speed: 30s;
+}
+article tbody tr:nth-child(2n) {
+	--radiant-color-2: #ffffff00;
+    --radiant-color-1: #ffffff14;
+    --radiant-size: 971px;
+    --radiant-speed: 30s;
+}
+
+
+@keyframes gradient-animation-vertical {
+	from {
+		background-position-y: 0px;
+	}
+	to {
+		background-position-y: var(--radiant-size);
+	}
+}
+article blockquote::after, .tool-bubble {
+	background: linear-gradient(0deg, var(--radiant-color-1), var(--radiant-color-2), var(--radiant-color-1));
+	background-size: var(--radiant-size) var(--radiant-size);
+	background-position-y: 0px;
+	background-attachment: fixed;
+	/* display: inline-block; */
+
+	animation: infinite gradient-animation-vertical var(--radiant-speed) linear;
+}
+article blockquote::after {
+	--radiant-color-2: #ffffff63;
+    --radiant-color-1: #ffffff2e;
+    --radiant-size: 227px;
+    --radiant-speed: 5s;
+}
+
+.toolbar .toolbarIcon {
+	transition: color 0.3s, opacity 0.3s, --radiant-color-2 0.3s, --radiant-color-1 0.3s;
+}
+.toolbarIcon.info {
+	--radiant-color-2: #ffffff68;
+    --radiant-color-1: #9fe1ff9e;
+    --radiant-size: 153px;
+    --radiant-speed: 10s;
+}
+.toolbarIcon.lang {
+	--radiant-color-2: #ffffff68;
+    --radiant-color-1: #ffb0b09e;
+    --radiant-size: 153px;
+    --radiant-speed: 10s;
+}
+.toolbarIcon.theme {
+	--radiant-color-2: #ffffff68;
+    --radiant-color-1: #98ff9f9e;
+    --radiant-size: 153px;
+    --radiant-speed: 10s;
+}
+
+.toolbarIcon.info:hover {
+	--radiant-color-2: #9fe1ff9e;
+    --radiant-color-1: #6bd0ffd2;
+    --radiant-size: 153px;
+}
+.toolbarIcon.lang:hover {
+	--radiant-color-2: #ffb0b09e;
+    --radiant-color-1: #ff8989c8;
+    --radiant-size: 153px;
+}
+.toolbarIcon.theme:hover {
+	--radiant-color-2: #98ff9f9e;
+    --radiant-color-1: #70ff79ca;
+    --radiant-size: 153px;
+}
+
+.toolbarIcon.info.selected {
+	--radiant-color-2: #0073ff;
+    --radiant-color-1: #bceaff;
+    --radiant-size: 153px;
+}
+.toolbarIcon.lang.selected {
+	--radiant-color-2: #ff3434;
+    --radiant-color-1: #ffbfbf;
+    --radiant-size: 153px;
+}
+.toolbarIcon.theme.selected {
+	--radiant-color-2: #3fff4c;
+    --radiant-color-1: #c0ffc4;
+    --radiant-size: 153px;
+}
+
+.toolbar {
+	margin-top: 5px;
+}
+
+.tool-dialogue-arrow-area {
+	display: none;
+}
+
+.tool-bubble {
+	background-color: transparent !important;
+	box-shadow: inset 0px 0px 10px var(--comedy-color), inset -4px 7px 8px -7px #00eed596;
+}
+
+.tool-bubble.theme {
+	--radiant-color-2: #97ff9a26;
+    --radiant-color-1: #00000000;
+    --radiant-size: 503px;
+    --radiant-speed: 15s;
+	--comedy-color: #a8ffaf59;
+}
+.tool-bubble.lang {
+	--radiant-color-2: #ff979726;
+    --radiant-color-1: #00000000;
+    --radiant-size: 503px;
+    --radiant-speed: 15s;
+	--comedy-color: #ff747459;
+}
+.tool-bubble.info {
+	--radiant-color-2: #97fff826;
+    --radiant-color-1: #00000000;
+    --radiant-size: 503px;
+    --radiant-speed: 15s;
+	--comedy-color: #8ee7ff59;
+}
+
+
+menu .directory a {
+	display: inline-block;
+	box-shadow: inset 0px 0px 10px #ffffff59, inset -6px 6px 8px -7px #00eed596;
+	transition: box-shadow 0.3s !important;
+}
+menu .directory a:hover {
+	box-shadow: inset 0px 0px 20px #ffffff59, inset -14px 16px 20px -16px #00eed596;
+}
+menu .directory a.current {
+	box-shadow: inset 0px 0px 3px #ffffff59, inset -6px 6px 4px -7px #00eed596;
+	color: #ffffffa0;
+}
+
+.mobile-menu-button {
+	box-shadow: inset 0px 0px 10px #ffffff59, inset 8px 6px 8px -7px #00eed596;
+	padding: 0.4em !important;
+	border-radius: calc(var(--roundness) * 15px) !important;
+	margin-top: 0.6em !important;
+	backdrop-filter: blur(3px);
+}
+
+
+thead th {
+	text-align: center;
+}
