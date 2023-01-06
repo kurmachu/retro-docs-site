@@ -1,0 +1,107 @@
+/* [THEME META] {"ver":2, "author":"DotEXEGaming", "description":"Can someone turn the light on? Incredibly dark."} */
+/* Theme meta needs to be the first line in your theme.
+   It must be valid JSON, must remain one line, and you must have the proper spacing before and after the JSON as shown above. 
+   You must at the minimum provide ver (theme system version, currently 2) and author. You may also provide description.
+   If you'd like to opt-out of accessibility checks, add "accessibility":"ignore". If your theme is high-contrast or otherwise meant for accessibility, add "accessibility":"optimized"*/
+
+/* Import any fonts you need */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/* Define most theme properties here */
+body {
+	/* Basic properties applied to the body */
+	background-color: black;
+	color: white;
+
+	/* Be sure to check the accessability of your theme! */
+
+	/* Theme properties */
+	--roundness: 1; /* How round is this theme? Applied automatically to borders. Unitless */
+
+	/* Fonts! */
+	font-family: Montserrat, sans-serif;
+	--code-font: Montserrat, sans-serif;
+
+	/* Let's start left-to-right, top to bottom. */
+	/* First, the menu colors */
+	/* Unselected */
+	--menu-link-background: rgb(10, 10, 10);
+    --menu-link-foreground: rgb(153, 153, 153); 
+
+	/* Hover */
+	--menu-link-background-hover: rgb(171, 170, 170);
+    --menu-link-foreground-hover: black;
+
+	/* Current page */
+	--menu-link-background-current: rgb(214, 214, 214);
+    --menu-link-foreground-current: black;
+
+	/* Next, the dividers! */
+	/* This is the divider between the menu and the page */
+	--layout-divider-color: rgb(23, 23, 23);
+	--layout-divider-width: 2px;
+
+	/* This is the color of hrs (including the title hr) */
+	--hr-color: rgba(255, 255, 255, 0.45);
+    
+	/* Onto the article! */
+	/* Links */
+	--article-link-color: #445dff;
+	--article-link-color-hover: #445dffb9;
+	--article-link-color-active: #0044ff;
+
+	/* Code segments (mono inlines) */
+	--article-color-code-foreground: #ffffff;
+    --article-color-code-background: #c2c2c26b;
+
+	/* Full code blocks (formatted segments) */
+	--article-pre-color: white;
+	--article-pre-border: rgb(20, 20, 20);
+	--article-pre-border-thickness: 3px;
+	--article-pre-background: rgb(7, 7, 7);
+	/* Formatted code keywords! */
+	--hljs-keyword: #42a3ff;
+	--hljs-string: #f2893e;
+	--hljs-comment: rgba(193, 193, 193, 0.62);
+	--hljs-title: white;
+	--hljs-params: white;
+	--hljs-number: white;
+	--hljs-built_in: white;
+	--hljs-literal: white;
+
+	/* Tables! Rare, but still there. */
+	--table-borders-color: #d7d7d7;
+	--table-header-color: black;
+	--table-body-color: black;
+	--table-body-color-alternate: #9a9a9a63;
+
+	/* Did you know markdown has block quotes? Yeah apparently it does. */
+	--blockquote-line-color: white;
+	--blockquote-text-color: #d7d7d7;
+
+	/* Onto the toolbar, at the bottom of the menu */
+	/* Color for the icons when not selected */
+	--toolbar-color: rgb(160, 160, 160);
+	--toolbar-hover-color: rgb(255, 255, 255);
+
+	/* Highlight color for each section (used as background for it and for the icon) */
+	--toolbar-lang-color: #ff624a;
+	--toolbar-theme-color: #15ce3d;
+	--toolbar-sync-color: #eccb0e;
+	--toolbar-info-color: #445dff;
+
+	/* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
+	--language-color: #610D00;
+	--theme-color: #064C16;
+	--sync-info-color: #302903;
+	--info-color: white;
+
+	/* We've gotta do mobile now, because apparently people want to read docs on their phone. */
+	/* The mobile menu is an overlay, so you might want to give it another color, or even some other effect? The important part is you do something, because otherwise it is transparent.*/
+	--mobile-menu-background: black;
+
+	/* On mobile there's a menu button, so we should give it a color and background.*/
+	--mobile-menu-button-color: white;
+	--mobile-menu-button-background: #ffffff9b;
+}
+/* Define additional css rules below! The body ones are just a quick start for changing colors and some common properties. Do whatever you'd like! */
