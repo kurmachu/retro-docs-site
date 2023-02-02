@@ -1,0 +1,143 @@
+/* [THEME META] {"ver":2, "author":"thekifake", "description":"A neon theme designed to look pretty while being easy to read in all circumstances."} */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Space+Mono&display=swap");
+
+/* Define most theme properties here */
+body {
+  /* Basic properties applied to the body */
+  background-color: #07010f;
+  color: var(--article-pre-color);
+
+  /* Theme properties */
+  --roundness: 0.5;
+
+  font-family: Montserrat, sans-serif;
+  --code-font: "Space Mono", monospace;
+
+  /* Unselected */
+  --menu-link-background: #b299d00f;
+  --menu-link-foreground: #e9abc0;
+
+  /* Hover */
+  --menu-link-background-hover: #642ca838;
+  --menu-link-foreground-hover: #ff44c4;
+
+  /* Current page */
+  --menu-link-background-current: #642ca8;
+  --menu-link-foreground-current: #dde8c6;
+
+  /* Dividers */
+  --layout-divider-color: rgba(0, 0, 0, 0.158);
+  --layout-divider-width: 3px;
+  --hr-color: rgba(234, 220, 255, 0.158);
+
+  /* Links */
+  --article-link-color: #f2ec8f; /* add glow */
+  --article-link-color-hover: #76cbf8ec;
+  --article-link-color-active: #ffa14d;
+
+  /* Code segments (mono inlines) */
+  --article-color-code-foreground: #ff35ae;
+  --article-color-code-background: #c6007621;
+
+  /* Full code blocks (formatted segments) */
+  --article-pre-color: #f5d8eb;
+  --article-pre-border: #d600792f;
+  --article-pre-border-thickness: 2px;
+  --article-pre-background: #20142e;
+  /* Formatted code keywords! */
+  --hljs-keyword: #ffe042;
+  --hljs-string: #ff65cc;
+  --hljs-comment: #fe98ec9e;
+  --hljs-title: white;
+  --hljs-params: white;
+  --hljs-number: white;
+  --hljs-built_in: white;
+  --hljs-literal: white;
+
+	/* Tables */
+	--table-borders-color: var(--article-pre-color);
+	--table-header-color: #c600760d;
+	--table-body-color: #260f1c74;
+	--table-body-color-alternate: #d7d7d717;
+
+	/* Blockquotes */
+	--blockquote-line-color: #9f6ee842;
+	--blockquote-text-color: var(--article-pre-color);
+
+  /* Color for the icons when not selected */
+  --toolbar-color: #ffd5fbb4;
+  --toolbar-hover-color: #ffffff;
+
+  /* Highlight color for each section (used as background for it and for the icon) */
+  --toolbar-lang-color: #c7695a;
+  --toolbar-theme-color: #801b8c;
+  --toolbar-sync-color: #eccb0e;
+  --toolbar-info-color: #44336c;
+
+  /* Color on top of the particular toolbar color defined above */
+  --language-color: #1e0703;
+  --theme-color: #f0e4eb;
+  --sync-info-color: #302903;
+  --info-color: white;
+
+  /* Mobile */
+	--mobile-menu-background: #130213de;
+	--mobile-menu-button-color: #ecaaf2;
+	--mobile-menu-button-background: #480e4d9c;
+
+  /* Nightowl glow colours */
+  --keyword-glow: #e3e347a7;
+  --link-glow: #eaeb903d;
+  --code-text-glow: #e06ab0a7;
+  --code-inline-glow: #c60076a7;
+  --emphasis-glow: #ffffff0a;
+  --mobile-menu-button-glow: #c60076a7;
+}
+
+.hljs-keyword {
+  /* text-shadow: rgb(255, 206, 122) 0px 0px 9px;
+   */
+  text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
+      4px var(--keyword-glow),
+    0 0 6px var(--keyword-glow), 0 0 8px var(--keyword-glow),
+    0 0 10px var(--keyword-glow), 0 0 12px var(--keyword-glow);
+}
+
+article a {
+  text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
+      2px var(--link-glow),
+    0 0 3px var(--link-glow), 0 0 4px var(--link-glow), 0 0 5px var(--link-glow),
+    0 0 6px var(--link-glow);
+  text-decoration: none;
+}
+
+pre code {
+  text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
+      8px var(--code-text-glow),
+    0 0 4px var(--code-text-glow), 0 0 8px var(--code-text-glow),
+    0 0 12px var(--code-text-glow), 0 0 16px var(--code-text-glow);
+}
+
+h3 code,
+h4 code,
+p code {
+  text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
+      8px var(--code-inline-glow),
+    0 0 4px var(--code-inline-glow), 0 0 8px var(--code-inline-glow),
+    0 0 12px var(--code-inline-glow), 0 0 16px var(--code-inline-glow);
+}
+
+strong, th {
+  text-shadow: /*0 0 2px #bfaad6a1, 0 0 4px #bfaad6a1, 0 0 6px #bfaad6a1,*/ 0 0
+      8px var(--emphasis-glow),
+    0 0 4px var(--emphasis-glow), 0 0 8px var(--emphasis-glow),
+    0 0 12px var(--emphasis-glow), 0 0 16px var(--emphasis-glow); /* maybe a bit too subtle? */
+}
+
+.mobile-menu-button {
+    text-shadow: 0 0
+      8px var(--mobile-menu-button-glow),
+    0 0 4px var(--mobile-menu-button-glow), 0 0 8px var(--mobile-menu-button-glow),
+    0 0 12px var(--mobile-menu-button-glow), 0 0 16px var(--mobile-menu-button-glow);
+}
