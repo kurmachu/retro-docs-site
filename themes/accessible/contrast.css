@@ -1,0 +1,105 @@
+/* [THEME META] {"ver":2, "author":"thekifake", "description":"High-contrast theme. Everything meets AAA standards.", "accessibility":"optimized"} */
+
+/* Import any fonts you need */
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Raleway&display=swap");
+
+/* Define most theme properties here */
+body {
+  /* Basic properties applied to the body */
+  background-color: white;
+  color: black;
+
+  /* Be sure to check the accessability of your theme! */
+
+  /* Theme properties */
+  --roundness: 0; /* How round is this theme? Applied automatically to borders. Unitless */
+
+  /* Fonts! */
+  font-family: "Raleway", sans-serif;
+  --code-font: "Anonymous Pro", monospace;
+
+  /* Let's start left-to-right, top to bottom. */
+  /* First, the menu colors */
+  /* Unselected */
+  --menu-link-background: #ffffff;
+  --menu-link-foreground: #000000;
+
+  /* Hover */
+  --menu-link-background-hover: #000000;
+  --menu-link-foreground-hover: #ffffff;
+
+  /* Current page */
+  --menu-link-background-current: #000000;
+  --menu-link-foreground-current: #ffffff;
+
+  /* Next, the dividers! */
+  /* This is the divider between the menu and the page */
+  --layout-divider-color: rgb(0, 0, 0);
+  --layout-divider-width: 3px;
+
+  /* This is the color of hrs (including the title hr) */
+  --hr-color: rgb(0, 0, 0);
+
+  /* Onto the article! */
+  /* Links */
+  --article-link-color: #0022ff;
+  --article-link-color-hover: #00107a;
+  --article-link-color-active: #176402;
+
+  /* Code segments (mono inlines) */
+  --article-color-code-foreground: #ffffff;
+  --article-color-code-background: #000000;
+
+  /* Full code blocks (formatted segments) */
+  --article-pre-color: white;
+  --article-pre-border: #a6a6a6;
+  --article-pre-border-thickness: 2px;
+  --article-pre-background: #000000;
+  /* Formatted code keywords! */
+  --hljs-keyword: #8dc8ff;
+  --hljs-string: #ffff65;
+  --hljs-comment: #44ff6d;
+  --hljs-title: white;
+  --hljs-params: white;
+  --hljs-number: white;
+  --hljs-built_in: white;
+  --hljs-literal: white;
+
+  /* Tables */
+	--table-borders-color: black;
+	--table-header-color: black;
+	--table-body-color: white;
+	--table-body-color-alternate: #cdcdcd;
+
+  /* Blockquotes */
+	--blockquote-line-color: black;
+	--blockquote-text-color: white;
+
+  /* Onto the toolbar, at the bottom of the menu */
+  /* Color for the icons when not selected */
+  --toolbar-color: black;
+  --toolbar-hover-color: black;
+
+  /* Highlight color for each section (used as background for it and for the icon) */
+  --toolbar-lang-color: #750800;
+  --toolbar-theme-color: #005c14;
+  --toolbar-sync-color: #eccb0e; /* Will remain untouched until the menu is added back */
+  --toolbar-info-color: #001feb;
+
+  /* Mobile */
+	--mobile-menu-background: #ffffff;
+	--mobile-menu-button-color: #000000;
+	--mobile-menu-button-background: #ffffff;
+
+  /* Color on top of the particular toolbar color defined above (be sure to check accessability!) */
+  --language-color: #ebebeb;
+  --theme-color: #fdf7d8;
+  --sync-info-color: #302903;
+  --info-color: white;
+}
+a:hover {
+  font-weight: bold;
+}
+th {
+  color: white;
+}
