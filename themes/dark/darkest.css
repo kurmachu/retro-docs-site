@@ -46,9 +46,9 @@ body {
     
 	/* Onto the article! */
 	/* Links */
-	--article-link-color: #445dff;
-	--article-link-color-hover: #445dffb9;
-	--article-link-color-active: #0044ff;
+	--article-link-color: #5269ff;
+	--article-link-color-hover: #5269ff;
+	--article-link-color-active: #5269ff;
 
 	/* Code segments (mono inlines) */
 	--article-color-code-foreground: #ffffff;
