@@ -21,6 +21,9 @@ VSCode is recommended as a **Live Server** config is used to properly preview th
 Once built, launch Live Server with the **Go Live** button and navigate into the `docs` folder to preview the site.
 
 ## Themes
+
+## ⚠️ We are not accepting contributions at this time.
+
 Themes are placed in catagories in the themes folder and automatically added to the list on full build, you can copy [Arithm](https://github.com/kurmachu/retro-docs-site/blob/master/themes/default/arithm.css) for commented properties and examples.
 
 Please ensure themes are accessible (using devtools, or [WebAIM](https://webaim.org/resources/contrastchecker/)), unless you specifically opt-out of accessibility with the `"accessibility":"ignore"` meta property.  
