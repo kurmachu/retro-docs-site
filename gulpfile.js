@@ -47,7 +47,8 @@ function build_docs(cb) {
 
 		let themes = []
 		
-		let siteFunction = pug.compileFile('site.pug')
+		// let siteFunction = pug.compileFile('site.pug') //Toggle with next line to re-enable for historical purposes(?)
+		let siteFunction = pug.compileFile('thankyou.pug')
 
 		new Promise(async (resolve, reject)=>{
 			index = await RecursivelyBuildIndex("./build/upstream/", "/", {langs: true})
@@ -169,7 +170,7 @@ exports.copy_themes = copy_themes
 
 
 var watchtask = function(done) {
-	gulp.watch(['static/**','site.pug','menu.pug', 'themes/**'],{}, gulp.parallel(build_docs, copy_static, copy_themes))
+	gulp.watch(['static/**','site.pug','menu.pug', 'thankyou.pug', 'themes/**'],{}, gulp.parallel(build_docs, copy_static, copy_themes))
 	console.log("Now running watch. Quit node to stop.")
 	done()
 }
